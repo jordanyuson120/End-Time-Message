@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth About the Predistination</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .header {
+            width: 100%;
+            background-color: #008000; /* Green */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #333;
+            background: #f5e9d4;
+            background-image: repeating-linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.3),
+                rgba(255, 255, 255, 0.3) 1px,
+                transparent 1px,
+                transparent 50px
+            );
+            padding-top: 80px;
+        }
+
+        .logo {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Add space between the image and text */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+        }
+
+        .comic-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 0 auto;
+            width: 90%;
+            max-width: 800px;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+        }
+
+        .day-box {
+            background: #f0f2f5;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+
+        .day-box img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            border-bottom: 2px solid #008000;
+            margin-bottom: 15px;
+        }
+
+        .day-box h2 {
+            color: red;
+            font-size: 1.8em;
+            text-align: center;
+            
+        }
+
+        .day-box p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+            color: #008000;
+        }
+
+        .back-btn {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #008000;
+            color: white;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            margin-left: 230px;
+        }
+
+        .back-btn:hover {
+            background-color: #006400;
+        }
+        #mystery-link {
+            border-bottom: 3px solid white;
+        }
+
+        #mystery-link:hover {
+            border-bottom: 2px solid white;
+        }
+        .hamburger {
+            display: none; /* Hide hamburger icon by default */
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+@media screen and (max-width: 768px) {
+    
+    .nav {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        position: fixed; /* Fullscreen menu */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #008000;
+        padding: 20px;
+        box-shadow: none;
+        z-index: 1001;
+        justify-content: flex-start; /* Start at the top */
+        align-items: center; /* Center horizontally */
+        text-align: center;
+        padding-top:100px;
+        margin-top:50px;
+    }
+
+    .nav.active {
+        display: flex; /* Show navigation when active */
+    }
+
+    .nav .logo {
+        display: flex;
+        flex-direction: column; /* Stack logo vertically */
+        align-items: center; /* Center logo content */
+        color: white;
+        margin-bottom: 30px; /* Space below logo */
+    }
+
+    .nav .logo img {
+        width: 60px; /* Larger logo size */
+        height: auto;
+        margin-bottom: 10px; /* Space between logo and text */
+    }
+
+    .nav a {
+        color: white;
+        font-size: 1.5em; /* Larger font size for fullscreen */
+        margin-bottom: 20px; /* Add spacing between links */
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1002; /* Above the fullscreen menu */
+        cursor:pointer;
+    }
+    .main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="" width="30">
+            The End Time Message
+        </div>
+        <i class="fa fa-bars hamburger" id="hamburger"></i>
+        <nav class="nav" id="nav">
+            <a href="home.html" id="home-link">Home</a>
+            <a href="story.html" id="story-link">Story</a>
+            <a href="Quiz.html" id="quiz-link">Quiz</a>
+            <a href="mystery.html" id="mystery-link">Mysteries</a>
+            <a href="bible.html" id="bible-link">Bible</a>
+
+
+        </nav>
+    </header>
+
+    <button class="back-btn" onclick="window.location.href='mystery.html';">Back to Mysteries</button>
+
+    <div class="comic-strip">
+        <h1>THE MYSTERY OF <span style="color:red">PREDESTINATION </span></h1>
+
+        <!-- Abraham and Keturah -->
+        <div class="day-box">
+<b><p>
+    Did you know that God foreknew all things from the very beginning and that He foreknew
+     each and everyone of us even before the foundation of the world?
+</p></b>
+<br>
+<p> Yes, the Bible said that God is infinite and omnipotent that He foreknew every gnat,
+     every fly, every sparrow, and every man that will ever be born upon the face of the 
+     earth. And that included YOU and me. The Scriptures say that God can hear your prayers
+      even before you open up your mouth; the hairs on your head hath He numbered; and that 
+      He hath engraved your name on the palm of His hand. </p>
+      <br>
+      <h2 style="text-align:left; color:black;">YOU ARE PREDESTINATED</h2>
+      <br>
+
+      <p>
+      <b> Ephesians 1:5-6 states </b> that God hath <i> “predestinated us according to the good pleasure
+         of His will, to the praise and glory of His grace.” </i>
+<br><br>
+<b> Romans 8:30 </b> further emphasizes this election saying, <i> “Whom He did predestinate,
+     THEM He also called; and whom He called, THEM He also justified; and whom He justified,
+      THEM He also glorified” </i> (past tense). And <i> “their names were written in the Lamb’s 
+      Book of Life before the foundation of the world” </i> <b> (Rev.13:8) </b>
+<br><br>
+If you are truly a child of God, you are foreknown of God even before there ever
+ was a star or moon in the entire universe. <b> Jesus said, </b> <i> “All that the Father has
+  given Me will come to Me and NONE of THEM will be LOST.” </i> <b> The Bible says, </b>
+ <i>  “All things work together for good to them that love God”, and that “the 
+  footsteps of the righteous are ordered by the Lord.” </i> Surely, you have to 
+  recognize yourself today whether you are God’s predestinated or not, for if 
+  God has elected you to eternal life, “nothing can pluck you from out of His hand.”
+      </p>
+    <br>
+
+    <h2 style="text-align:left; color:black;">FALL OF MAN: A PERMISSIVE WILL</h2>
+    <p>
+        Did you know that it was God’s permissive will for SIN to come into this world? Strange,
+         but true. He permitted sin in order for Him to display His great attributes of being
+          a <b> SAVIOUR and a REDEEMER. </b> He allowed Adam and Eve, our first parent, to be deceived
+           by the serpent in order to make way for His great redemptive plan of salvation.
+            God Himself wanted to be glorified. He could not have been glorified as a 
+            Saviour if there was nobody to be saved in the first place. There had to be 
+            sinners first, before He could ever display His attributes of being a Saviour. 
+            In the same manner that He had to create sons and daughters in me and you first,
+             so that He could become a Father. Man’s existence and fall, therefore, had made
+              God both Father and Saviour to us, and a Blessed Redeemer, too.
+<br><br>
+In order to be God, He knew from the very beginning who will be saved and who will not be saved.
+ God was not willing that anyone should perish, but that all might come to repentance. 
+ But He, being infinite, knew the end from the beginning. And therefore, He knew who 
+ would accept and those who would not accept His provided way of salvation. 
+ He knew who would go to heaven and those who would go to hell. If He didn’t, 
+ then He isn’t God. But God is unlimited. He is infinite and He makes no mistakes. 
+ His works are perfect; and He knows all things. He is the Alpha and Omega, the beginning and the end.
+    </p>
+    <br>
+    <h2 style="text-align:left; color:black;">JESUS DIED JUST FOR THE ELECT</h2>
+    <p>
+        And God sent Jesus Christ for only one specific purpose : that’s to save and redeem
+         those who God foreknew will be saved; and not the rest of the world. Yes, sir.
+          Notice Jesus in His prayer to the Father in <b> John 17:9-10, </b> <i> “I pray for them :
+           I pray NOT for the world, but for THEM which Thou hast given Me; for they are
+            Thine. And all Mine are Thine, and Thine are Mine, and I am glorified in THEM.” </i>
+
+To <i> “REDEEM” </i> simply means to <i> “TAKE BACK” </i> what was originally God’s own. Jesus, as a 
+Redeemer, was to take back only those who once belonged originally to God but were 
+trapped in sin by the natural birth. Jesus shed His precious Blood only for those
+ who had been foreknown of God, and for those whose names were written in the Lamb’s
+  Book of Life before the foundation of the world. Jesus could never redeem the Devil’s
+   children, for they are not of God. They were simply predestinated unto eternal damnation,
+    and were basically created for that purpose. Yes, though this might seem to be a 
+    hard saying, but the Scriptures support this truth.
+    </p>
+    <br>
+    <h2 style="text-align:left; color:black;"> HOW CAN THE POT SAY TO THE POTTER? </h2>
+    <p>
+        Don’t you realize that even sinners and reprobates are predestinated by God? Yes,
+         In <b> 1 Peter 2:8 and it says, </b> <i> “Even to them which stumble at the Word, being disobedient:
+          whereunto they were appointed.” </i> <b> Jude 1:4 says it, too: </b> <i> “Who were before of old ordained
+           to this condemnation, ungodly men, turning the grace of God into lasciviousness”. </i>
+<br><br>
+Talk about Judas, Cain, Pharaoh and Balaam - all these men had played their 
+significant part as God’s adversary in God’s greatest drama series, the Bible,
+ without them even realizing it so. <i> “How can the POT say to the POTTER, 
+ ‘Why hast Thou made me thus?’ Hath not the Potter power over the clay to 
+ make one vessel unto honour, and another unto dishonour?” </i> <b> (Romans 9:21), </b>
+ these words pertain to predestination. God raises evil to fulfill his glorious
+  purpose of greater good. God said in <b> Isaiah 45:7- </b> <i> ” I form the light, and create 
+  darkness: I make peace, and create evil: I the LORD do all these things.” </i>
+    </p>
+    <br>
+    <h2 style="text-align:left; color:black;"> THE GOSPEL IS HID </h2>
+    <p>
+        Jesus rejoiced in the Spirit <b> (Luke 10:21) saying, </b> <i> “I thank Thee Father, 
+        O Lord of heaven and earth, for Thou hast HID these things from the eyes
+         of the wise and prudent, and hast revealed them unto babes; even so, Father,
+          for so it seemed good in Thy sight.” </i> This blessed Gospel is, therefore,
+           revealed only to His elected ones. God hid His truth from unbelievers.
+<br><br>
+Did you know also that one of God’s permissive will has been to allow sickness
+ to afflict mankind? Yes, He sometimes permit sickness and diseases in order for
+  Him to manifest Himself as a Healer. <b> Exodus 16:26 states, </b> <i> “For I am the Lord
+   that healeth thee”. </i> <b> Isaiah 53:5 states </b> this also: <i> “He was wounded for our 
+   transgressions, He was bruised for our iniquities, the chastisement of our
+    peace was upon Him, and by His stripes, we are HEALED”. </i> Doctors simply make
+     the stitches and give us prescriptions, but it’s still God Who does the real 
+     Healing, which is multiplication of new cells in the body, which is creation
+      by nature. God truly foreordained all His godly attributes to be displayed
+       unto men and all these attributes were finally fulfilled when God Himself
+        became MAN through His Son Jesus Christ and took the penalty for our sins
+         so that by believing in Him we may be justified and forgiven. Jesus said,
+        <i>  “I am the way, the truth and the life; no man cometh unto the Father except by Me.” </i>
+<br><br>
+Your salvation and my salvation, therefore, is truly dependent upon God’s
+ choosing and approval. <b> Romans 9:16 states, </b> <i> “It is not him that willeth or
+  him that runneth, but of God that sheweth mercy”. </i> <b> For God saith unto Moses, </b>
+  <i> “I will have mercy on whom I will have mercy, and I will have compassion 
+   on whom I will have compassion.” </i> <b> God hath even declared, </b> <i> “Jacob have I loved,
+    and Esau I have hated”, </i> even before the two children were born from their 
+    mother’s womb, not having done neither good nor evil. That only proves God’s election to us.
+<br><br>
+The apostle Paul finally concluded, <i> “But if our gospel be hid, it is HID
+ to them that are lost” </i> <b> (2 Cor. 4:3). </b> Truly, in this day, <i> “Many will be
+  called, but only very few are chosen.” </i> Sincerity and being just religious
+   is not enough. The Pharisees and the Saducees were so sincerely wrong. 
+   They spent all their lives studying God in the synagogues yet when the 
+   very Messiah-God came to them, they dubbed Him as “Beelzebub” to the extent
+    of crucifying Him on the cross.
+    </p>
+    <br>
+
+    <h2 style="text-align:left; color:black;"> NOT EVERYONE SHALL ENTER THE KINGDOM </h2>
+    <p>
+       <i> “Not everyone that saith unto Me, Lord, Lord, shall enter into the kingdom of heaven,” </i>
+         saith Jesus in <b> Matthew 7:21, </b> <i> “but he that doeth the will of My Father.” </i> The 
+         Bible says that we are not saved by any of our good works nor by any of our 
+         own personal merits. We are saved by faith alone in the finished atonement of
+          Jesus Christ. <i> “For by grace are ye saved through faith; and that not of yourselves: 
+          it is the gift of God: NOT of WORKS, lest any man should boast” </i> <b> (Eph. 2:8,9). </b>
+<br><br>
+Only God’s <b> ELECTED </b> few will be able to receive the full understanding of these 
+mysteries in the Scriptures. Others who are not, will simply continue to hold 
+to man-made dogmas, creeds, rituals, and religious traditions to merit their own
+ salvation. <i> “In vain you do worship Me, teaching for doctrine the commandments of men”. </i>
+  That’s what Jesus told the Pharisees. <i> “There seemeth a way that’s right to a man, 
+  but the end thereof is the ways of death.” </i> It’s always death to trust in the sinking
+   sands of man’s ideas. The elect will only walk in the way of God’s Bible. The elect
+    of God will hunger and thirst only for the fresh manna of the Word that’s revealed
+     in the age that they are living in. And this is that Word. Receive it.
+    </p>
+    <br>
+<a href="mystery.html" style="text-decoration: none;">Back to Mysteries</a>
+    </div>
+</body>
+<script>
+    // JavaScript to toggle the navigation menu
+    document.getElementById('hamburger').addEventListener('click', function () {
+        const nav = document.getElementById('nav');
+        nav.classList.toggle('active'); // Toggle the 'active' class
+    });
+</script>
+</html>

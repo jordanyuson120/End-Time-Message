@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Truth on Water Baptism</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .header {
+            width: 100%;
+            background-color: #008000; /* Green */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-sizing: border-box; /* Include padding in width */
+            position: fixed; /* Fix the header at the top */
+            top: 0; /* Align to the top of the page */
+            left: 0; /* Align to the left */
+            z-index: 1000; /* Ensure it appears on top of other content */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #333;
+            background: #f5e9d4; /* Light parchment-like background */
+            padding-top: 80px; /* Space for the fixed header */
+        }
+
+        .logo {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Add space between the image and text */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+        }
+
+        .comic-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 0 auto;
+            width: 90%;
+            max-width: 800px;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+        }
+
+        .day-box {
+            background: #f0f2f5; /* Paper-like white background */
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: justify; /* Neat alignment for readability */
+        }
+
+        .day-box img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            border-bottom: 2px solid #008000;
+            margin-bottom: 15px;
+        }
+
+        .day-box h2 {
+            color: #008000;
+            font-size: 1.8em;
+        }
+
+        .day-box p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+            color: #008000;
+        }
+
+        .back-btn {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #008000;
+            color: white;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            margin-left: 230px;
+        }
+
+        .back-btn:hover {
+            background-color: #006400; /* Darker green on hover */
+        }
+
+        #mystery-link {
+            border-bottom: 3px solid white; /* Adds a bottom border */
+        }
+
+        #mystery-link:hover {
+            border-bottom: 2px solid white; /* Keeps the border on hover */
+        }
+        .hamburger {
+            display: none; /* Hide hamburger icon by default */
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+@media screen and (max-width: 768px) {
+    
+    .nav {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        position: fixed; /* Fullscreen menu */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #008000;
+        padding: 20px;
+        box-shadow: none;
+        z-index: 1001;
+        justify-content: flex-start; /* Start at the top */
+        align-items: center; /* Center horizontally */
+        text-align: center;
+        padding-top:100px;
+        margin-top:50px;
+    }
+
+    .nav.active {
+        display: flex; /* Show navigation when active */
+    }
+
+    .nav .logo {
+        display: flex;
+        flex-direction: column; /* Stack logo vertically */
+        align-items: center; /* Center logo content */
+        color: white;
+        margin-bottom: 30px; /* Space below logo */
+    }
+
+    .nav .logo img {
+        width: 60px; /* Larger logo size */
+        height: auto;
+        margin-bottom: 10px; /* Space between logo and text */
+    }
+
+    .nav a {
+        color: white;
+        font-size: 1.5em; /* Larger font size for fullscreen */
+        margin-bottom: 20px; /* Add spacing between links */
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1002; /* Above the fullscreen menu */
+        cursor:pointer;
+    }
+    .main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="" width="30">
+            The End Time Message
+        </div>
+        <i class="fa fa-bars hamburger" id="hamburger"></i>
+        <nav class="nav" id="nav">
+            <a href="home.html" id="home-link">Home</a>
+            <a href="story.html" id="story-link">Story</a>
+            <a href="Quiz.html" id="quiz-link">Quiz</a>
+            <a href="mystery.html" id="mystery-link">Mysteries</a>
+            <a href="bible.html" id="bible-link">Bible</a>
+
+
+        </nav>
+    </header>
+
+    <button class="back-btn" onclick="window.location.href='mystery.html';">Back to Mysteries</button>
+
+    <div class="comic-strip">
+        <h1>THE TRUTH ON WATER BAPTISM</h1>
+        <div class="day-box">
+            <h2>INTRODUCTION</h2>
+            <p>
+                <strong>WATER BAPTISM</strong> is a basic requirement to a Christian’s salvation.
+                <br><br>
+                <b>MARK 16:16</b> states, <i>“He that believeth and is baptized shall be SAVED; but he that 
+                  believeth NOT shall be damned.”</i>
+                <br><br>
+                <b>I Peter 3:21</b> also reads, <i>“The like figure whereunto [even] baptism doth also now 
+                  SAVE us (not the putting away of the filth of the flesh, but the answer of a good conscience
+                   toward God,) by the resurrection of Jesus Christ.”</i>
+                <br><br>
+                A series of questions usually arise in Water Baptism: “What is the Biblical way of doing it?”
+                 Is baptism performed by sprinkling? Or is it by immersion in water? Is it using the <b>TITLES
+                  of Father, Son and Holy Ghost</b> <b>(Matt. 28:19)</b>, or using the <b>NAME of the Lord Jesus 
+                  Christ?</b> <b>(Acts 2:38)?</b>
+                <br><br>
+                The Bible cannot contradict itself for it is the Word of God. What we need today is a 
+                revelation from Almighty God in order to for us to understand and dovetail every word 
+                in it correctly. Let us therefore take a closer look upon this all-time controversial issue.
+                <br><br>
+                The word <i>“baptize”</i> originated from the Greek Word <i>“baptizo”</i> which means to <i>“IMMERSE”</i> in water.
+                 For the first thirteen hundred years from the death of Christ, baptism was always performed 
+                 by <b>IMMERSION of the person UNDER WATER.</b>
+            </p>
+            <img src="images/BAPTISM-CHRISTIAN.jpg" alt="Water Baptism Content" height="1000">
+
+            <p>
+              <b>Acts 8:39</b> states this, <i>“And they went both DOWN INTO the WATER, both Philip and the
+                 Eunuch; and he baptized him” </i>. <b>John 3:23</b> also states, <i>“John also was baptizing
+                   at Aeneon because there was MUCH WATER there”</i> . <i>“They came up OUT OF THE WATER”
+                   </i> <b>(Acts 8:39).</b>
+<br><br>
+It is therefore evident from these very scriptures that Water Baptism was originally performed by “immersion” 
+of the individual person underwater.
+            </p>
+            <img src="images/BAPTISM-CATHOLIC.jpg" alt="Water Baptism Content" >
+
+            <h2>TITLES OR NAME?</h2>
+
+            <p>
+              In <b>Matthew 28:19</b> we can read Jesus’ great commission unto His disciples saying, 
+              <i>“Go ye therefore, and teach all nations, BAPTIZING them in the NAME of the Father, and 
+                of the Son, and of the Holy Ghost.”</i>
+<br><br>
+Now, Jesus Christ, the Author and Finisher of our faith, never told us to baptize in the <b>NAMES,</b> but in the 
+<b>N-A-M-E, (singular).</b> The clue here is to find what <b>NAME</b> the Father, the Son, and the Holy Ghost possess. Take 
+note that the word <i>“Father”</i> is not a <b>NAME.</b> <i>“Son”</i> is not a <b>NAME</b> either; neither is the Holy Ghost a <b>NAME.</b> 
+These are but <b>TITLES of the ONE true GOD.</b>
+            </p>
+
+            <img src="images/TITLES-ONLY.jpg" alt="">
+
+            <p>
+              If we trace God’s Name back in the Old Testament, we will find that God the <b>FATHER</b> was 
+              always called the <i>“LORD”</i>, capital <i>"L-O-R-D".</i>
+<br><br>
+In the New Testament, we find that <i>“JESUS”</i> was the name given to the <b>SON of God.</b>
+<br><br>
+In this our age, the dispensation of grace, when the Holy Ghost was given since the Day of Pentecost, 
+He is called the <i>“CHRIST”</i> or the <i>“Anointing”</i> of God.
+<br><br>
+We can now therefore conclude from these basis that the <b>TITLES</b> of <i>“Father, Son and Holy Ghost”</i> refer to 
+only one compound <b>NAME,</b> which is the only Name which was given on earth whereby man must be saved 
+<b>(Acts 4:12)</b> - and that <b>NAME</b> is nothing else but the NAME of the <i>“LORD JESUS CHRIST”,</i> the complete 
+<b>NAME of GOD.</b>
+            </p>
+
+            <img src="images/NAMES.jpg" alt="">
+            <img src="images/BAPTISM-NAME.jpg" alt="">
+
+
+            <p>
+              We can read all throughout the Bible that ALL of Jesus’ disciples used His NAME in Water 
+              Baptism <b>(References: Acts 2;38; Acts 19:1-5; Acts 10:46-48; Acts 8:14) .</b>
+<br><br>
+<b>NEVER</b> can we find in the entire pages of the Bible where anybody was ever baptized using the <b>TITLES</b> of Father,
+ Son and Holy Ghost. Look it up for yourself and you’ll NEVER find one. There’s a million dollar reward today 
+ for anyone who can find one verse that states just that.
+<br><br>
+The apostles understood that baptism in those <b>TITLES</b> was not a <b>LITERAL</b> command, just as when Jesus told them,
+ <i>“Except you EAT My FLESH and DRINK my BLOOD, you have NO Life in you”.</i> Nowhere in the Bible can we find that
+  they literally <b>ATE</b> the flesh of Jesus nor <b>DRANK</b> his blood. Literally eating Jesus’ <b>FLESH</b> and literally 
+  DRINKING His BLOOD would make them cannibals and vampires if such command was followed to the letter.
+   But the thing is that it was revealed unto them that eating His Body means "partaking of His Word" 
+   and drinking his Blood meant "receiving His Atoning sacrifice" into their lives. In Water Baptism, 
+   It was revealed also unto them WHO really was the Father, the Son and the Holy Ghost, and what the 
+   NAME of God really was. "Lord Jesus Christ", that's the complete Name of God.
+            </p>
+<br>
+            <h2>THE APOSTLES HAD A CORRECT REVELATION</h2>
+            <p>
+              Apostle PETER, having been given the keys to the Kingdom, commanded the JEWS, saying, 
+              <i>“REPENT everyone of you and BE BAPTIZED in the NAME OF JESUS CHRIST for the remission 
+                of sins”</i> <b>(Acts 2:38)</b> <i>“and you shall receive the gifts of the Holy Spirit.”</i>
+<br><br>
+The same FORMULA was used by Saint PAUL. Paul himself REBAPTIZED the disciples of John the Baptist 
+<b>(Acts 19:1-5)</b> in this same manner, saying, <i>“Have ye received the Holy Ghost SINCE you believed?
+   They said, ‘We know not whether there be any Holy Ghost.’ Paul said, “How was you baptized?” 
+   They said,’ We’ve been baptized unto John.’ Then said Paul, “John verily baptized with baptism
+    of repentance, saying to the people that they should believe on Him that should come after him,
+     that is on CHRIST JESUS.”</i> WHEN THEY HEARD THIS, they were baptized in the NAME of the LORD JESUS” .
+PETER AND JOHN did the same to the SAMARITANS as well in <b>Acts 10:48,</b>” And he commanded them to be
+ <b>BAPTIZED in the NAME of the LORD JESUS” .</b>
+<br><br>
+The GENTILES who were in the house of Cornelius who first received the Gospel were also baptized in this 
+same manner <b>(Acts 10:46-48)</b> , “For they heard them speak with tongues, and magnified God. 
+Then answered PETER, “Can any man forbid water, that these should not be baptized, which have received 
+the Holy Ghost as well as we? AND HE COMMANDED them to be <b>BAPTIZED in the NAME of the LORD JESUS” (NIV).</b>
+<br><br>
+ALL true believers in the Bible, both Jews, Gentiles and Samaritans, were ALL baptized in the <b>NAME of JESUS 
+CHRIST,</b> for that is the genuine and Biblical way of doing it. What about you?
+<br><br>
+It was the Roman Catholic Church that brought forth such false baptism of sprinkling, and changed it from 
+the Name of the Lord Jesus Christ to Father, Son, Holy Ghost after the year <b>325 A.D.</b> Majority of her 
+daughters, the Protestant churches, had taken the same dogma till this day and are observing blindly 
+the same formula without realizing it so. (Read historical facts at the bottom).
+            </p>
+            <br>
+            <h2>WERE ST. PETER AND PAUL WRONG?</h2>
+            <p>
+              No. These apostles knew what most religious leaders of today FAIL to recognize.
+<br><br>
+First: That the NAME of the Lord Jesus Christ is the FAMILY NAME of all Christians both in heaven and
+ on earth <b>(Read Eph.3:15).</b>
+<br><br>
+Second: There is NO OTHER NAME under heaven whereby we must be SAVED only in the Name of JESUS 
+<b>(Acts 4:12).</b>
+<br><br>
+Third: That the FULLNESS of the Godhead dwelleth BODILY in CHRIST <b>(Col. 2:9).</b>
+<br><br>
+And fourth: That BAPTISM must be performed in the NAME of the CRUCIFIED <b>(Read 1 Cor. 1:13).</b>
+<br><br>
+The Bible tells us that “Whatever you DO in word or in DEED, do ALL in the NAME of the LORD JESUS CHRIST”
+ <b>(Col. 3:17).</b> JESUS even taught us that “REPENTANCE and REMISSION of sins should be preached in HIS
+  NAME, beginning at Jerusalem, unto the uttermost parts of the world” <b>(Luke 24:47).</b>
+            </p>
+
+            <br>
+            <h2>THREE TITLES TO ONE NAME</h2>
+            <p>
+              Father, Son and Holy Ghost are THREE TITLES. Yet there is only ONE NAME. It was revealed unto 
+              the apostles that salvation alone goes in the NAME of JESUS CHRIST <b>(Acts 4:12).</b>
+<br><br>
+The Bible teaches that there is NO salvation in any other name, title or places, ONLY in the 
+NAME of JESUS CHRIST <b>(Acts 4:12).</b> Yet He is the “Rose of Sharon”, “Lily of the Valley”, “Morning Star”,
+ “Alpha and Omega” - HE IS ALL THESE THINGS, yet there’s NO SALVATION in any of these titles; ONLY IN THE
+  NAME OF JESUS CHRIST.
+<br><br>
+God has so many TITLES: “Our Righteousness”, “Our Peace”, “Ever-Present”, “Our Father”, “Our King”,
+ “Prince of Peace”, “Son”, and “Holy Ghost”. BUT He has ONLY ONE HUMAN NAME, and that NAME is JESUS 
+ - by which Name every knee shall bow and every tongue shall confess that He is King of kings and Lord 
+ of lords.
+<br><br>
+Everyone, therefore, that is BAPTIZED with the TITLES of Father, Son and Holy Ghost is baptized in NO NAME
+ AT ALL. They are TITLES like Minister, Reverend, Doctor, whatevermore, Father, Son, Daughter, Wife - TITLES.
+  You may say it does not make a difference. Then try putting your TITLE on your check and not your NAME,
+   and see whether the BANK would encash it - say, “I sign this check in the name of the Husband”... That
+    just make sense as it would to disbelieve God’s Word when the revelation is laying right here before
+     your eyes.
+<br><br>
+That NAME is the Password to heaven. It is also the KEY to all the heavenly blessings and supernatural gifts
+ that God has given to the church. “In my NAME you shall cast our devils, In My NAME you shall speak with 
+ new tongues, in My NAME you shall lay hands on the sick and they shall recover” <b>(Mark 16:17-18).</b> “If ye shall
+  ask any thing in my NAME, I will do [it].” <b>(John 14:14).</b>
+            </p>
+
+            <img src="images/godhead-chart.jpg" alt="">
+            <br>
+            <h2>WHAT ABOUT MATTHEWS 28:19?</h2>
+            <p>
+              The above-given Scriptures (Book of Acts) are not given to refute <b>Matthew 28:19</b>
+               where Jesus told the apostles to baptize in the NAME of the Father, of the Son, and of 
+               the Holy Ghost. They merely show HOW the command was interpreted and obeyed by the disciples 
+               in the entire Bible.
+            </p>
+            <br>
+            <h2>AN INVITATION</h2>
+            <p>
+              If you have not been baptized in the NAME of the LORD JESUS CHRIST yet, YOUR BAPTISM IS WRONG. 
+              You have to be REBAPTIZED AGAIN in the NAME of Jesus Christ in order for you to receive the
+               Spirit of God.
+<br><br>
+<b>Acts 2:38</b> plainly says, “REPENT, everyone of you, and BE BAPTIZED in the NAME of JESUS CHRIST for
+ (What?) the REMISSION OF SINS - (You are still in your sins if you are not baptized in the NAME of the 
+ LORD JESUS CHRIST for no other Name is given whereby we must be saved), “AND YOU SHALL RECEIVE THE GIFT
+  OF THE HOLY GHOST”.
+<br><br>
+GOD IS CALLING ON YOU TODAY, SINCERE CHRISTIAN, to be restored back to the original faith that was once 
+delivered to the saints. As Romans 8:30 says, “Whom He did predestinate, them He also CALLED: and whom He 
+called, then He also justified: and whom He justified, them He also glorified.”
+<br><br>
+If you are God’s predestinated seed, you will recognize this Message to be the Truth. And you will not wait 
+long until you are baptized in the NAME of the LORD JESUS CHRIST. Get right with God now while mercy and grace 
+is upon your reach. “Obedience is better than sacrifice” <b>(1 Samuel 15:22).</b>
+<br><br>
+Find a church wherein they believe this End Time Message and be baptized in the NAME of the JESUS CHRIST 
+for the assurance of your salvation.
+            </p>
+            <br>
+            <h2>***HISTORICAL FACTS AND RECORDS***</h2>
+            <p>
+              <strong>BRITANNICA ENCYCLOPEDIA -</strong> "Everywhere in the oldest sources, it states that baptism took place in the Name of Jesus Christ." (11th Edition/Vol.3/p.82)
+<br><br>
+<strong>CANNY ENCYCLOPEDIA OF RELIGION -</strong> "The Early Church always baptized in the Name of the Lord Jesus until the development of the Trinity Doctrine in the 3rd Century." (Pp. 53).
+<br><br>
+<strong>HASTINGS ENCYCLOPEDIA OF RELIGION -</strong> "Christian Baptism was administered using the words "In the Name of Jesus". The use of a Trinity formula of any sort was not suggested in the early church history. Baptism was always in the Name of the Lord Jesus until the time of Justin Maryr when triune formula was used." (Volume 2/PP. 377-378.)
+            </p>
+            <br>
+            <h2>THE TRUTH ABOUT INFANT BAPTISM</h2>
+            <img src="images/BABYDEDICATION.jpg" alt="">
+            <br>
+            <p>
+              Most Christian churches today baptize babies by sprinkling water on them and calling it “infant baptism”. <strong>But nowhere in the Bible can we find where the Apostles of Jesus ever baptized babies. Infant Baptism is not a Biblical teaching; it is a dogma of the Roman Catholic Church. There's no baby that was ever sprinkled in the Bible.</strong>
+<br><br>
+<strong>In the Old Testament, we will find that the the high priest circumcised the babies on the 8th day.</strong> Leviticus 12:2-3, “Speak unto the children of Israel, saying, If a woman have conceived seed, and born a man child: then she shall be unclean seven days; according to the days of the separation for her infirmity shall she be unclean. And in the eighth day the flesh of his foreskin shall be circumcised.”
+<br><br>
+<strong>But in the New Testament, the only way the apostles dedicated the babies unto God is by bringing the little ones to the Lord Jesus.</strong> Jesus lifted them up in His hands, and blessed them, saying, "Suffer little children to come unto Me, and forbid them not: for of such is the Kingdom." (Matt. 19:13-15; Luke 18: 15-17). Thus, this is the correct Biblical formula for dedicating babies unto the Lord.
+<br><br>
+<strong>Water Baptism is a confession that an inward work of grace has been done.</strong> Yet little infants has no knowledge of sin and they know not how to repent. But of course, the baby is borned in sin, shaped in iniquity, comes to the world speaking lies, and they're sinners by nature. But when Jesus died at the cross, He died to take away the sins of the world. <strong>And when a baby becomes a human being and is born into this world, they have no sin of their own. The Blood of Jesus Christ already atones for the baby’s sin. And therefore they have no repentance to be done and no water baptism is required of them, not until they reach the age of accountability. The baby comes to the age of accountability between the age of 12 to 13 years old.</strong> During such age, the child knows already what's right and wrong. Therefore, it’s the proper time for him or her to repent for what he/she has done. And when he/she repents, then's that’s the time to undergo water baptism (Acts 2:38 - “Repent and be baptized..”) by immersion.
+<br><br>
+<strong>Brother Branham explains it to us this way:</strong>
+<br><br>
+<strong>“A little child, no matter what kind of a parent it's got, how sinful they are, that wouldn't make any difference, for the Blood of Jesus Christ cleanses its sin.</strong> That baby cannot repent. It doesn't know how to repent. It has no reasons of being here of its own. It can't tell you why it's here. But God sent it here. And the Blood of Jesus Christ cleanses it the very moment that it comes into the world, and it's until it's the age of accountability, and then it knows right and wrong. And then what it does, it's got to repent for what it knows that it's done wrong. And then the blood of Jesus Christ cleanses and makes an atonement for that child. <strong>If it dies, he perfectly goes right into the Presence of God. And if it was born from the most sinful parents in the world, until it's the age of accountability where it knows right and wrong,</strong> and then what it does from then on, it's got to be forgiven for that. It's got to ask its own repentance from then on.” (WMB, ENTICING.SPIRITS, 55-0724)
+<br><br>
+“And now, because a baby is, ‘far as sin, it has none. <strong>Jesus died to take the away the sins of world, and the baby has done no sin.</strong> Only it was--it's a sinner. It's borned in sin. But, when Christ died at Calvary, He took away the sins of the world, and the baby is not responsible until it becomes the age of accountability. <strong>And any little baby, no matter how sinful the parents are, as soon as it dies, it goes straight to the arms of Christ.</strong> See? Because He paid the price. No matter if it was a baby borned in sin, and by adultery, or whatever it is. Makes no difference at all. That baby is safe with Christ, because He died to take away the sins of the world. <strong>And, when it gets old enough now that it's done personal sin, then it has to repent for what it has done.</strong> But it has no personal sin until it's old enough to commit sin, to know which is right and wrong.” (JOSEPH.MEETING.HIS.BRETHREN JEFF.IN 56-1230)
+            </p>
+<a href="mystery.html" style="text-decoration: none;">Back to Mysteries</a>
+        </div>
+    </div>
+</body>
+<script>
+    // JavaScript to toggle the navigation menu
+    document.getElementById('hamburger').addEventListener('click', function () {
+        const nav = document.getElementById('nav');
+        nav.classList.toggle('active'); // Toggle the 'active' class
+    });
+</script>
+</html>

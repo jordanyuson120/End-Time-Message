@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Stories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .header {
+            width: 100%;
+            background-color: #008000; /* Green */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-sizing: border-box; /* Include padding in width */
+            position: fixed; /* Fix the header at the top */
+            top: 0; /* Align to the top of the page */
+            left: 0; /* Align to the left */
+            z-index: 1000; /* Ensure it appears on top of other content */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+          margin: 0;
+          font-family: 'Georgia', 'Times New Roman', serif;
+          color: #333;
+          background: #f5e9d4; /* Light parchment-like background */
+          padding-top: 80px; /* Space for the fixed header */
+      }
+
+      .logo {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Add space between the image and text */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-top: 20px;
+        }
+
+        .main-content {
+            margin: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns */
+            gap: 20px; /* Space between the grid items */
+        }
+
+        .box-container {
+            text-align: center;
+            border: solid 1px black;
+            margin-top: 20px;
+            transition: transform 0.3s ease; /* Smooth zoom effect */
+        }
+
+        .box-container:hover {
+            transform: scale(1.1); /* Zoom in the entire box-container when hovered */
+        }
+
+        .box {
+            background-color: #3b6cc0; /* Blue background */
+            height: 200px; /* Box height */
+            border: 2px solid #008000; /* Green border */
+            display: flex;
+            flex-direction: column; /* Ensure image and text are stacked vertically */
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+            position: relative;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .box-title {
+            padding-top:15px;
+            padding-bottom:15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+        a {
+          text-decoration:none;
+        }
+        #story-link {
+    border-bottom: 3px solid white; /* Adds a bottom border */
+}
+
+#story-link:hover {
+    border-bottom: 2px solid white; /* Keeps the border on hover */
+}
+.hamburger {
+            display: none; /* Hide hamburger icon by default */
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+@media screen and (max-width: 768px) {
+    .nav {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        position: fixed; /* Fullscreen menu */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #008000;
+        padding: 20px;
+        box-shadow: none;
+        z-index: 1001;
+        justify-content: flex-start; /* Start at the top */
+        align-items: center; /* Center horizontally */
+        text-align: center;
+        padding-top:100px;
+        margin-top:50px;
+    }
+
+    .nav.active {
+        display: flex; /* Show navigation when active */
+    }
+
+    .nav .logo {
+        display: flex;
+        flex-direction: column; /* Stack logo vertically */
+        align-items: center; /* Center logo content */
+        color: white;
+        margin-bottom: 30px; /* Space below logo */
+    }
+
+    .nav .logo img {
+        width: 60px; /* Larger logo size */
+        height: auto;
+        margin-bottom: 10px; /* Space between logo and text */
+    }
+
+    .nav a {
+        color: white;
+        font-size: 1.5em; /* Larger font size for fullscreen */
+        margin-bottom: 20px; /* Add spacing between links */
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1002; /* Above the fullscreen menu */
+        cursor:pointer;
+    }
+    .main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="" width="30">
+            The End Time Message
+        </div>
+        <i class="fa fa-bars hamburger" id="hamburger"></i>
+        <nav class="nav" id="nav">
+            <a href="home.html" id="home-link">Home</a>
+            <a href="story.html" id="story-link">Story</a>
+            <a href="Quiz.html">Quiz</a>
+            <a href="mystery.html" id="mystery-link">Mysteries</a>
+            <a href="bible.html" id="bible-link">Bible</a>
+
+
+        </nav>
+    </header>
+
+    <h1>Bible Stories</h1>
+    <div class="main-content">
+        <!-- Story 1 -->
+        <a href="story1.html">
+        <div class="box-container">
+             <!-- Link to the specific story page -->
+                <div class="box">
+                    <img src="images/story1.jpg" alt="When God Made Everything">
+                </div>
+                <div class="box-title">Story 1: When God Made Everything</div>
+        </div>
+      </a>
+
+        <!-- Story 2 -->
+        <a href="story2.html"> <!-- Link to the specific story page -->
+        <div class="box-container">
+
+                <div class="box">
+                    <img src="images/story2.jpg" alt="The Start of Man's Sadness">
+                </div>
+                <div class="box-title">Story 2: The Start of Man's Sadness</div>
+        </div>
+      </a>
+
+        <!-- Story 3 -->
+        <a href="story3.html">
+        <div class="box-container">
+             <!-- Link to the specific story page -->
+                <div class="box">
+                    <img src="images/story3.jpg" alt="Noah and the Great Flood">
+                </div>
+                <div class="box-title">Story 3: Noah and the Great Flood</div>
+          
+        </div>
+      </a>
+
+        <!-- Story 4 -->
+        <a href="story4.html"> 
+        <div class="box-container">
+           <!-- Link to the specific story page -->
+                <div class="box">
+                    <img src="images/tower.jpg" alt="God's Promise to Abraham">
+                </div>
+                <div class="box-title">Story 4: Tower of Babel</div>
+        </div>
+      </a>
+        <!-- Repeat the boxes with different story content -->
+
+      <a href="story5.html">
+        <div class="box-container">
+          <div class="box">
+              <img src="images/story5.jpg" alt="When God Made Everything">
+          </div>
+          <div class="box-title">Story 5: God Tests Abraham's Love</div>
+      </div>
+    </a>
+
+    <a href="story6.html">
+      <div class="box-container">
+          <div class="box">
+              <img src="images/story6.jpg" alt="The Start of Man's Sadness">
+          </div>
+          <div class="box-title">Story 6: Jacob the Deceiver</div>
+      </div>
+    </a>
+
+      <a href="story7.html">
+      <div class="box-container">
+          <div class="box">
+              <img src="images/story7.jpg" alt="Noah and the Great Flood">
+          </div>
+          <div class="box-title">Story 7: A Favorite Son Becomes a Slave</div>
+      </div>
+    </a>
+
+      <a href="story8.html">
+      <div class="box-container">
+          <div class="box">
+              <img src="images/story8.jpg" alt="God's Promise to Abraham">
+          </div>
+          <div class="box-title">Story 8: God Honors Joseph the Slave</div>
+      </div>
+    </a>
+      <!-- Repeat the boxes with different story content -->
+    </div>
+</body>
+<script>
+    // JavaScript to toggle the navigation menu
+    document.getElementById('hamburger').addEventListener('click', function () {
+        const nav = document.getElementById('nav');
+        nav.classList.toggle('active'); // Toggle the 'active' class
+    });
+</script>
+</html>

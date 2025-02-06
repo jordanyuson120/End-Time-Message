@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Temptation and Fall of Man - Genesis 3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .header {
+            width: 100%;
+            background-color: #008000; /* Green */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-sizing: border-box; /* Include padding in width */
+            position: fixed; /* Fix the header at the top */
+            top: 0; /* Align to the top of the page */
+            left: 0; /* Align to the left */
+            z-index: 1000; /* Ensure it appears on top of other content */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            margin: 0;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #333;
+            background: #f5e9d4; /* Light parchment-like background */
+            background-image: repeating-linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.3),
+                rgba(255, 255, 255, 0.3) 1px,
+                transparent 1px,
+                transparent 50px
+            );
+            padding-top: 80px; /* Space for the fixed header */
+        }
+
+        .logo {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Add space between the image and text */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+        }
+
+        /* Comic-strip container */
+        .comic-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 0 auto;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        /* Day Box Styles */
+        .day-box {
+            background: #f0f2f5; /* Paper-like white background */
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: justify; /* Neat alignment for readability */
+        }
+
+        .day-box img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-bottom: 2px solid #008000;
+            margin-bottom: 15px;
+        }
+
+        .day-box h2 {
+            color: #008000;
+            font-size: 1.8em;
+            text-align: center;
+        }
+
+        .day-box p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        /* Heading */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+            color: #008000;
+        }
+
+        .back-btn {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #008000;
+            color: white;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            margin-left: 230px;
+        }
+
+        .back-btn:hover {
+            background-color: #006400; /* Darker green on hover */
+        }
+
+        #story-link {
+            border-bottom: 3px solid white; /* Adds a bottom border */
+        }
+
+        #story-link:hover {
+            border-bottom: 2px solid white; /* Keeps the border on hover */
+        }
+        .hamburger {
+            display: none; /* Hide hamburger icon by default */
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+@media screen and (max-width: 768px) {
+    .nav {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        position: fixed; /* Fullscreen menu */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #008000;
+        padding: 20px;
+        box-shadow: none;
+        z-index: 1001;
+        justify-content: flex-start; /* Start at the top */
+        align-items: center; /* Center horizontally */
+        text-align: center;
+        padding-top:100px;
+        margin-top:50px;
+    }
+
+    .nav.active {
+        display: flex; /* Show navigation when active */
+    }
+
+    .nav .logo {
+        display: flex;
+        flex-direction: column; /* Stack logo vertically */
+        align-items: center; /* Center logo content */
+        color: white;
+        margin-bottom: 30px; /* Space below logo */
+    }
+
+    .nav .logo img {
+        width: 60px; /* Larger logo size */
+        height: auto;
+        margin-bottom: 10px; /* Space between logo and text */
+    }
+
+    .nav a {
+        color: white;
+        font-size: 1.5em; /* Larger font size for fullscreen */
+        margin-bottom: 20px; /* Add spacing between links */
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1002; /* Above the fullscreen menu */
+        cursor:pointer;
+    }
+    .main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="" width="30">
+            The End Time Message
+        </div>
+        <i class="fa fa-bars hamburger" id="hamburger"></i>
+        <nav class="nav" id="nav">
+            <a href="home.html" id="home-link">Home</a>
+            <a href="story.html" id="story-link">Story</a>
+            <a href="Quiz.html">Quiz</a>
+            <a href="mystery.html" id="mystery-link">Mysteries</a>
+            <a href="bible.html" id="bible-link">Bible</a>
+
+
+        </nav>
+    </header>
+
+    <button class="back-btn" onclick="window.location.href='story.html';">Back to Stories</button>
+
+    <div class="comic-strip">
+        <h1>The Temptation and Fall of Man - Genesis 3</h1>
+
+        <!-- The Serpent's Deception -->
+        <div class="day-box">
+          <img src="images/day8.jpg" alt="Creation of Light">
+            <h2>The Serpent's Deception</h2>
+            <p>
+                1 Now the serpent was more cunning than any beast of the field which the Lord God had made. And he said to the woman, “Has God indeed said, ‘You shall not eat of every tree of the garden’?”<br>
+                2 And the woman said to the serpent, “We may eat the fruit of the trees of the garden; 3 but of the fruit of the tree which is in the midst of the garden, God has said, ‘You shall not eat it, nor shall you touch it, lest you die.’ ”<br>
+                4 Then the serpent said to the woman, “You will not surely die. 5 For God knows that in the day you eat of it your eyes will be opened, and you will be like God, knowing good and evil.”
+            </p>
+        </div>
+
+        <!-- The Fall of Man -->
+        <div class="day-box">
+          <img src="images/day0.jpg" alt="Creation of Light">
+            <h2>The Fall of Man</h2>
+            <p>
+                6 So when the woman saw that the tree was good for food, that it was pleasant to the eyes, and a tree desirable to make one wise, she took of its fruit and ate. She also gave to her husband with her, and he ate. 7 Then the eyes of both of them were opened, and they knew that they were naked; and they sewed fig leaves together and made themselves coverings.<br>
+                8 And they heard the sound of the Lord God walking in the garden in the cool of the day, and Adam and his wife hid themselves from the presence of the Lord God among the trees of the garden.<br>
+                9 Then the Lord God called to Adam and said to him, “Where are you?”<br>
+                10 So he said, “I heard Your voice in the garden, and I was afraid because I was naked; and I hid myself.”
+            </p>
+        </div>
+
+        <!-- The Consequences -->
+        <div class="day-box">
+          <img src="images/day10.jpg" alt="Creation of Light">
+            <h2>The Consequences</h2>
+            <p>
+                11 And He said, “Who told you that you were naked? Have you eaten from the tree of which I commanded you that you should not eat?”<br>
+                12 Then the man said, “The woman whom You gave to be with me, she gave me of the tree, and I ate.”<br>
+                13 And the Lord God said to the woman, “What is this you have done?”<br>
+                The woman said, “The serpent deceived me, and I ate.”<br>
+                14 So the Lord God said to the serpent: "Because you have done this, You are cursed more than all cattle, And more than every beast of the field; On your belly you shall go, And you shall eat dust All the days of your life."
+                15 And I will put enmity
+Between you and the woman,
+And between your seed and her Seed;
+He shall bruise your head,
+And you shall bruise His heel.”
+
+16 To the woman He said:
+
+“I will greatly multiply your sorrow and your conception;
+In pain you shall bring forth children;
+Your desire shall be [e]for your husband,
+And he shall rule over you.”
+
+17 Then to Adam He said, “Because you have heeded the voice of your wife, and have eaten from the tree of which I commanded you, saying, ‘You shall not eat of it’:
+
+“Cursed is the ground for your sake;
+In toil you shall eat of it
+All the days of your life.
+18 Both thorns and thistles it shall [f]bring forth for you,
+And you shall eat the herb of the field.
+19 In the sweat of your face you shall eat bread
+Till you return to the ground,
+For out of it you were taken;
+For dust you are,
+And to dust you shall return.”
+
+20 And Adam called his wife’s name Eve,[g] because she was the mother of all living.
+
+21 Also for Adam and his wife the Lord God made tunics of skin, and clothed them.
+            </p>
+        </div>
+
+        <!-- The Expulsion from Eden -->
+        <div class="day-box">
+          <img src="images/day10.jpeg" alt="Creation of Light">
+            <h2>The Expulsion from Eden</h2>
+            <p>
+                22 Then the Lord God said, “Behold, the man has become like one of Us, to know good and evil. And now, lest he put out his hand and take also of the tree of life, and eat, and live forever”— 23 therefore the Lord God sent him out of the garden of Eden to till the ground from which he was taken. 24 So He drove out the man; and He placed cherubim at the east of the garden of Eden, and a flaming sword which turned every way, to guard the way to the tree of life.
+            </p>
+            <a href="story.html">Back to Story</a>
+        </div>
+    </div>
+</body>
+<script>
+    // JavaScript to toggle the navigation menu
+    document.getElementById('hamburger').addEventListener('click', function () {
+        const nav = document.getElementById('nav');
+        nav.classList.toggle('active'); // Toggle the 'active' class
+    });
+</script>
+</html>

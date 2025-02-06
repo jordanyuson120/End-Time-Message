@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .header {
+            width: 100%;
+            background-color: #008000; /* Green */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-sizing: border-box; /* Include padding in width */
+            position: fixed; /* Fix the header at the top */
+            top: 0; /* Align to the top of the page */
+            left: 0; /* Align to the left */
+            z-index: 1000; /* Ensure it appears on top of other content */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+          margin: 0;
+          font-family: 'Georgia', 'Times New Roman', serif;
+          color: #333;
+          background: #f5e9d4; /* Light parchment-like background */
+           /* Space for the fixed header */
+      }
+
+      .logo {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Add space between the image and text */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-top: 20px;
+        }
+
+        #bible-link {
+            border-bottom: 3px solid white;
+        }
+
+        #bible-link:hover {
+            border-bottom: 2px solid white;
+        }
+
+        .hamburger {
+            display: none; /* Hide hamburger icon by default */
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 768px) {
+    .nav {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        position: fixed; /* Fullscreen menu */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #008000;
+        padding: 20px;
+        box-shadow: none;
+        z-index: 1001;
+        justify-content: flex-start; /* Start at the top */
+        align-items: center; /* Center horizontally */
+        text-align: center;
+        padding-top:100px;
+        margin-top:50px;
+    }
+
+    .nav.active {
+        display: flex; /* Show navigation when active */
+    }
+
+    .nav .logo {
+        display: flex;
+        flex-direction: column; /* Stack logo vertically */
+        align-items: center; /* Center logo content */
+        color: white;
+        margin-bottom: 30px; /* Space below logo */
+    }
+
+    .nav .logo img {
+        width: 60px; /* Larger logo size */
+        height: auto;
+        margin-bottom: 10px; /* Space between logo and text */
+    }
+
+    .nav a {
+        color: white;
+        font-size: 1.5em; /* Larger font size for fullscreen */
+        margin-bottom: 20px; /* Add spacing between links */
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1002; /* Above the fullscreen menu */
+        cursor:pointer;
+    }
+}
+
+.style a {
+    text-decoration: none;
+    color:#008000;;
+}
+.style a:hover {
+    text-decoration: underline;
+}
+.bible-content {
+    max-width: 800px;
+    margin: auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Georgia', serif;
+    line-height: 1.8;
+}
+
+.chapter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #008000;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.chapter-footer {
+    margin-top:50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.chapter-header h1 {
+    margin: 0;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.nav-button {
+    background-color: #f0e6d6;
+    color: #008000;
+    border: none;
+    padding: 5px 10px;
+    font-size: 1em;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #dcccbc;
+}
+
+/* Verses */
+.verses p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.verse-number {
+    color: #008000;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="" width="30">
+            The End Time Message
+        </div>
+        <i class="fa fa-bars hamburger" id="hamburger"></i>
+        <nav class="nav" id="nav">
+            <a href="home.html" id="home-link">Home</a>
+            <a href="story.html" id="story-link">Story</a>
+            <a href="Quiz.html">Quiz</a>
+            <a href="mystery.html" id="mystery-link">Mysteries</a>
+            <a href="bible.html" id="bible-link">Bible</a>
+
+        </nav>
+    </header>
+
+    <main style="margin-top: 80px; padding: 20px;">
+        <section class="bible-content">
+           <a href="bible.html" style="text-decoration: none;">Back to Bible Page</a><br><br>
+            <div class="chapter-header">
+                <button class="nav-button">&lt; Previous Chapter</button>
+                <h1>Genesis Chapter 1</h1>
+                <button class="nav-button">Next Chapter &gt;</button>
+            </div>
+            <div class="verses">
+                <p><span class="verse-number">1</span> In the beginning God created the heaven and the earth.</p>
+                <p><span class="verse-number">2</span> And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.</p>
+                <p><span class="verse-number">3</span> And God said, Let there be light: and there was light.</p>
+                <p><span class="verse-number">4</span> And God saw the light, that it <i>was</i> good: and God divided the light from the darkness.</p>
+                <p><span class="verse-number">5</span> And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day.</p>
+                <p><span class="verse-number">6</span> And God said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters.</p>
+                <p><span class="verse-number">7</span> And God made the firmament, and divided the waters which <i>were</i> under the firmament from the waters which <i>were</i> above the firmament: and it was so.</p>
+                <p><span class="verse-number">8</span>And God called the firmament Heaven. And the evening and the morning were the second day. </p>
+                <p><span class="verse-number">9</span>And God said, Let the waters under the heaven be gathered together unto one place, and let the dry land appear: and it was so. </p>
+                <p><span class="verse-number">10</span> And God called the dry land Earth; and the gathering together of the waters called he Seas: and God saw that it was good.</p>
+                <p><span class="verse-number">11</span> And God said, Let the earth bring forth grass, the herb yielding seed, and the fruit tree yielding fruit after his kind, whose seed is in itself, upon the earth: and it was so.</p>
+                <p><span class="verse-number">12</span>And the earth brought forth grass, and herb yielding seed after his kind, and the tree yielding fruit, whose seed was in itself, after his kind: and God saw that it was good. </p>
+                <p><span class="verse-number">13</span> And the evening and the morning were the third day.</p>
+                <p><span class="verse-number">14</span>And God said, Let there be lights in the firmament of the heaven to divide the day from the night; and let them be for signs, and for seasons, and for days, and years: </p>
+                <p><span class="verse-number">15</span> And let them be for lights in the firmament of the heaven to give light upon the earth: and it was so.</p>
+                <p><span class="verse-number">16</span>And God made two great lights; the greater light to rule the day, and the lesser light to rule the night: he made the stars also. </p>
+                <p><span class="verse-number">17</span> And God set them in the firmament of the heaven to give light upon the earth,</p>
+                <p><span class="verse-number">18</span> And to rule over the day and over the night, and to divide the light from the darkness: and God saw that it was good.</p>
+                <p><span class="verse-number">19</span> And the evening and the morning were the fourth day.</p>
+                <p><span class="verse-number">20</span> And God said, Let the waters bring forth abundantly the moving creature that hath life, and fowl that may fly above the earth in the open firmament of heaven.</p>
+                <p><span class="verse-number">21</span>And God created great whales, and every living creature that moveth, which the waters brought forth abundantly, after their kind, and every winged fowl after his kind: and God saw that it was good. </p>
+                <p><span class="verse-number">22</span> And God blessed them, saying, Be fruitful, and multiply, and fill the waters in the seas, and let fowl multiply in the earth.</p>
+                <p><span class="verse-number">23</span> And the evening and the morning were the fifth day.</p>
+                <p><span class="verse-number">24</span> And God said, Let the earth bring forth the living creature after his kind, cattle, and creeping thing, and beast of the earth after his kind: and it was so.</p>
+                <p><span class="verse-number">25</span> And God made the beast of the earth after his kind, and cattle after their kind, and every thing that creepeth upon the earth after his kind: and God saw that it was good.</p>
+                <p><span class="verse-number">26</span> And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth. </p>
+                <p><span class="verse-number">27</span> So God created man in his own image, in the image of God created he him; male and female created he them.</p>
+                <p><span class="verse-number">28</span> And God blessed them, and God said unto them, Be fruitful, and multiply, and replenish the earth, and subdue it: and have dominion over the fish of the sea, and over the fowl of the air, and over every living thing that moveth upon the earth. </p>
+                <p><span class="verse-number">29</span> And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of a tree yielding seed; to you it shall be for meat. </p>
+                <p><span class="verse-number">30</span> And to every beast of the earth, and to every fowl of the air, and to every thing that creepeth upon the earth, wherein there is life, I have given every green herb for meat: and it was so. </p>
+                <p><span class="verse-number">31</span> And God saw every thing that he had made, and, behold, it was very good. And the evening and the morning were the sixth day. </p>
+                <div class="chapter-footer">
+                <button class="nav-button">&lt; Previous Chapter</button>
+                <button class="nav-button">Next Chapter &gt;</button>
+            </div>
+            </div>
+        </section>
+    </main>
+
+ 
+</body>
+<script>
+    // JavaScript to toggle the navigation menu
+    document.getElementById('hamburger').addEventListener('click', function () {
+        const nav = document.getElementById('nav');
+        nav.classList.toggle('active'); // Toggle the 'active' class
+    });
+</script>
+</html>

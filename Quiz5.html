@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Deuteronomy Quiz</title>
+    <style>
+        .header {
+            width: 100%;
+            background-color: #008000; /* Green */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-sizing: border-box; /* Include padding in width */
+            position: fixed; /* Fix the header at the top */
+            top: 0; /* Align to the top of the page */
+            left: 0; /* Align to the left */
+            z-index: 1000; /* Ensure it appears on top of other content */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #333;
+            padding-top: 60px; /* Offset for fixed header */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center; /* Align items vertically */
+            gap: 10px; /* Add space between the image and text */
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+        }
+
+        .quiz-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .options label {
+            display: block;
+            margin: 5px 0;
+            font-size:16px;
+        }
+
+        p {
+            font-size:18px;
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #008000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .btn:hover {
+            background-color: #005f00;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        input {
+            cursor: pointer;
+        }
+        .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1000; /* Sit on top */
+        left: 50%; /* Center horizontally */
+        top: 50%; /* Center vertically */
+        transform: translate(-50%, -50%); /* Offset for exact centering */
+        width: 80%; /* Set width of modal */
+        max-width: 500px; /* Limit modal width */
+        background-color: #fff; /* White background */
+        border: 1px solid #ccc; /* Optional border */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for effect */
+        padding: 20px; /* Add some padding */
+    }
+
+    .modal-content {
+        position: relative; /* Ensure elements stay within modal */
+    }
+
+    .close {
+        position: absolute; /* Position close button */
+        top: 10px; /* Align near top */
+        right: 10px; /* Align near right edge */
+        font-size: 1.5em; /* Increase size */
+        color: #888; /* Gray color */
+        cursor: pointer; /* Change cursor to pointer */
+    }
+
+    .close:hover {
+        color: #000; /* Black on hover */
+    }
+    #quiz-link {
+    border-bottom: 3px solid white; /* Adds a bottom border */
+}
+
+#quiz-link:hover {
+    border-bottom: 2px solid white; /* Keeps the border on hover */
+}
+.back-btn {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #008000;
+            color: white;
+            border: none;
+            font-size: 17px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .hamburger {
+            display: none; /* Hide hamburger icon by default */
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+@media screen and (max-width: 768px) {
+    
+    .nav {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        position: fixed; /* Fullscreen menu */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #008000;
+        padding: 20px;
+        box-shadow: none;
+        z-index: 1001;
+        justify-content: flex-start; /* Start at the top */
+        align-items: center; /* Center horizontally */
+        text-align: center;
+        padding-top:100px;
+        margin-top:50px;
+    }
+
+    .nav.active {
+        display: flex; /* Show navigation when active */
+    }
+
+    .nav .logo {
+        display: flex;
+        flex-direction: column; /* Stack logo vertically */
+        align-items: center; /* Center logo content */
+        color: white;
+        margin-bottom: 30px; /* Space below logo */
+    }
+
+    .nav .logo img {
+        width: 60px; /* Larger logo size */
+        height: auto;
+        margin-bottom: 10px; /* Space between logo and text */
+    }
+
+    .nav a {
+        color: white;
+        font-size: 1.5em; /* Larger font size for fullscreen */
+        margin-bottom: 20px; /* Add spacing between links */
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1002; /* Above the fullscreen menu */
+        cursor:pointer;
+    }
+    .main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="" width="30">
+            The End Time Message
+        </div>
+        <i class="fa fa-bars hamburger" id="hamburger"></i>
+        <nav class="nav" id="nav">
+            <a href="home.html" id="home-link">Home</a>
+            <a href="story.html" id="story-link">Story</a>
+            <a href="Quiz.html" id="quiz-link">Quiz</a>
+            <a href="mystery.html" id="mystery-link">Mysteries</a>
+            <a href="bible.html" id="bible-link">Bible</a>
+
+
+        </nav>
+    </header>
+
+    <div class="quiz-container">
+        <form id="quiz-form">
+            <br>
+            <a class="back-btn" href="Quiz.html">Back to Quiz</a>
+            <h1 style=" text-align:center; ">Book of Deuteronomy Bible Quiz </h1>
+            <br><br>
+            <div class="question">
+                <p>1. What is the first commandment in Deuteronomy 5:7?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A. Worship</label>
+                    <label><input type="radio" name="q1" value="B"> B. Honor</label>
+                    <label><input type="radio" name="q1" value="C"> C. Obey</label>
+                    <label><input type="radio" name="q1" value="D"> D. Love</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. Which mountain did Moses ascend to view the Promised Land?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A. Sinai</label>
+                    <label><input type="radio" name="q2" value="B"> B. Nebo</label>
+                    <label><input type="radio" name="q2" value="C"> C. Carmel</label>
+                    <label><input type="radio" name="q2" value="D"> D. Zion</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. How many years did the Israelites wander in the desert?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A. 30</label>
+                    <label><input type="radio" name="q3" value="B"> B. 40</label>
+                    <label><input type="radio" name="q3" value="C"> C. 50</label>
+                    <label><input type="radio" name="q3" value="D"> D. 60</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. Who succeeded Moses as the leader of Israel?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A. Caleb</label>
+                    <label><input type="radio" name="q4" value="B"> B. Joshua</label>
+                    <label><input type="radio" name="q4" value="C"> C. Aaron</label>
+                    <label><input type="radio" name="q4" value="D"> D. Samuel</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. What is the central commandment in Deuteronomy 6:5?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A. Love</label>
+                    <label><input type="radio" name="q5" value="B"> B. Honor</label>
+                    <label><input type="radio" name="q5" value="C"> C. Remember</label>
+                    <label><input type="radio" name="q5" value="D"> D. Rejoice</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6. Which king did Moses mention as an enemy of Israel in Deuteronomy 2:24?</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A. Pharaoh</label>
+                    <label><input type="radio" name="q6" value="B"> B. Sihon</label>
+                    <label><input type="radio" name="q6" value="C"> C. Nebuchadnezzar</label>
+                    <label><input type="radio" name="q6" value="D"> D. Saul</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. Which tribe did not receive a territorial inheritance in the Promised Land?</p>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A. Judah</label>
+                    <label><input type="radio" name="q7" value="B"> B. Levi</label>
+                    <label><input type="radio" name="q7" value="C"> C. Reuben</label>
+                    <label><input type="radio" name="q7" value="D"> D. Benjamin</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <p>8. What is the central commandment in Deuteronomy 6:5?</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A. Love</label>
+                    <label><input type="radio" name="q8" value="B"> B. Honor</label>
+                    <label><input type="radio" name="q8" value="C"> C. Remember</label>
+                    <label><input type="radio" name="q8" value="D"> D. Rejoice</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <p>9. Which king did Moses mention as an enemy of Israel in Deuteronomy 2:24?</p>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A. Pharaoh</label>
+                    <label><input type="radio" name="q9" value="B"> B. Sihon</label>
+                    <label><input type="radio" name="q9" value="C"> C. Nebuchadnezzar</label>
+                    <label><input type="radio" name="q9" value="D"> D. Saul</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <p>10. In Deuteronomy 28, what happens to those who obey God's commandments?</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A. Cursed</label>
+                    <label><input type="radio" name="q10" value="B"> B. Blessed</label>
+                    <label><input type="radio" name="q10" value="C"> C. Exiled</label>
+                    <label><input type="radio" name="q10" value="D"> D. Rejected</label>
+                </div>
+            </div>
+            
+
+
+
+
+
+
+            <button type="button" class="btn" onclick="checkAnswers()">Submit</button>
+        </form>
+        
+        <div id="resultModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="modal-result"></div>
+            </div>
+        </div>
+
+        <script>
+            function checkAnswers() {
+                const answers = {
+                    q1: 'C',
+                    q2: 'B',
+                    q3: 'B',
+                    q4: 'B',
+                    q5: 'C',
+                    q6: 'A',
+                    q7: 'B',
+                    q8: 'A',
+                    q9: 'B',
+                    q10: 'B'
+                };
+    
+                let score = 0;
+                const totalQuestions = Object.keys(answers).length;
+                const form = document.getElementById('quiz-form');
+    
+                for (const [question, correctAnswer] of Object.entries(answers)) {
+                    const userAnswer = form[question].value;
+                    if (userAnswer === correctAnswer) {
+                        score++;
+                    }
+                }
+    
+                const percentage = ((score / totalQuestions) * 100).toFixed(2);
+                const passMessage = score >= 7 ? "You Pass! Amen." : "You Fail! Try Again.";
+    
+                const modalResult = document.getElementById('modal-result');
+                modalResult.innerHTML = `
+                    <h3 style="text-align:center; color:green;">Result</h3>
+                    <p>Your Points: ${score} / ${totalQuestions}</p>
+                    <p>Your Score: ${percentage}%</p>
+                    <p>${passMessage}</p>
+                    <a href="Quiz5.html">Click Here to try Again</a>
+                `;
+                modalResult.style.color = score >= 7 ? "green" : "red";
+    
+                // Show the modal
+                const modal = document.getElementById('resultModal');
+                modal.style.display = "block";
+            }
+    
+            function closeModal() {
+                const modal = document.getElementById('resultModal');
+                modal.style.display = "none";
+            }
+    
+            // Close modal if user clicks outside of it
+            window.onclick = function(event) {
+                const modal = document.getElementById('resultModal');
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            };
+        </script>
+        <script>
+            // JavaScript to toggle the navigation menu
+            document.getElementById('hamburger').addEventListener('click', function () {
+                const nav = document.getElementById('nav');
+                nav.classList.toggle('active'); // Toggle the 'active' class
+            });
+        </script>
+</body>
+</html>

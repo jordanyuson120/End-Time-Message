@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth About the Original Sin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .header {
+            width: 100%;
+            background-color: #008000; /* Green */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #333;
+            background: #f5e9d4;
+            background-image: repeating-linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.3),
+                rgba(255, 255, 255, 0.3) 1px,
+                transparent 1px,
+                transparent 50px
+            );
+            padding-top: 80px;
+        }
+
+        .logo {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Add space between the image and text */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+        }
+
+        .comic-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 0 auto;
+            width: 90%;
+            max-width: 800px;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+        }
+
+        .day-box {
+            background: #f0f2f5;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+
+        .day-box img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            border-bottom: 2px solid #008000;
+            margin-bottom: 15px;
+        }
+
+        .day-box h2 {
+            color: red;
+            font-size: 1.8em;
+            text-align: center;
+            
+        }
+
+        .day-box p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+            color: #008000;
+        }
+
+        .back-btn {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #008000;
+            color: white;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            margin-left: 230px;
+        }
+
+        .back-btn:hover {
+            background-color: #006400;
+        }
+        #mystery-link {
+            border-bottom: 3px solid white;
+        }
+
+        #mystery-link:hover {
+            border-bottom: 2px solid white;
+        }
+        .hamburger {
+            display: none; /* Hide hamburger icon by default */
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+@media screen and (max-width: 768px) {
+    
+    .nav {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        position: fixed; /* Fullscreen menu */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #008000;
+        padding: 20px;
+        box-shadow: none;
+        z-index: 1001;
+        justify-content: flex-start; /* Start at the top */
+        align-items: center; /* Center horizontally */
+        text-align: center;
+        padding-top:100px;
+        margin-top:50px;
+    }
+
+    .nav.active {
+        display: flex; /* Show navigation when active */
+    }
+
+    .nav .logo {
+        display: flex;
+        flex-direction: column; /* Stack logo vertically */
+        align-items: center; /* Center logo content */
+        color: white;
+        margin-bottom: 30px; /* Space below logo */
+    }
+
+    .nav .logo img {
+        width: 60px; /* Larger logo size */
+        height: auto;
+        margin-bottom: 10px; /* Space between logo and text */
+    }
+
+    .nav a {
+        color: white;
+        font-size: 1.5em; /* Larger font size for fullscreen */
+        margin-bottom: 20px; /* Add spacing between links */
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1002; /* Above the fullscreen menu */
+        cursor:pointer;
+    }
+    .main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="" width="30">
+            The End Time Message
+        </div>
+        <i class="fa fa-bars hamburger" id="hamburger"></i>
+        <nav class="nav" id="nav">
+            <a href="home.html" id="home-link">Home</a>
+            <a href="story.html" id="story-link">Story</a>
+            <a href="Quiz.html" id="quiz-link">Quiz</a>
+            <a href="mystery.html" id="mystery-link">Mysteries</a>
+            <a href="bible.html" id="bible-link">Bible</a>
+
+
+        </nav>
+    </header>
+
+    <button class="back-btn" onclick="window.location.href='mystery.html';">Back to Mysteries</button>
+
+    <div class="comic-strip">
+        <h1>THE TRUTH ABOUT THE <span style="color:red">ORIGINAL SIN</span></h1>
+
+        <!-- Abraham and Keturah -->
+        <div class="day-box">
+          <b> <p>
+            For years we have been taught and believed that Adam and Eve, our first parents in the
+             garden of Eden, ate an apple from the tree in the midst of the garden, and through
+              this act of disobedience the whole world plunged into sin.
+           </p> </b>
+
+           <h2>WAS IT AN APPLE THAT EVE DID EAT?</h2>
+           <img src="images/original-sin.jpg" alt="">
+           <br>
+           <p>
+            QUESTIONS TO PONDER
+<br><br>
+First of all, we can never find the word <i>“apple” </i> in the <b> Book of Genesis </b> in relation to the fruit 
+that Eve ate.
+<br><br>
+Secondly, it would be a very shallow reason for God to punish His own children with death
+ just because of eating an apple. God should have included <i> “not eating an apple” </i> in the Ten Commandments.
+<br><br>
+Thirdly, if the real reason why man fell was eating an apple, Adam and Eve
+ should have covered their mouth with fig leaves because it was it that 
+ caused the sin. But why cover their sex organs instead?
+<br><br>
+Fourthly, why is it that the punishment given to Eve for eating an apple 
+was to suffer more pain in more childbearing instead of punishing her with
+ eating more apples? Could it be that childbearing is connected with the original sin?
+<br><br>
+Fifth, if the serpent was already a crawling snake at the beginning,
+ why did God curse it by making it to crawl again? Could it be that the
+  serpent was an upright creature before the curse? The Bible said that 
+  he even talked and reasoned with Eve.
+<br><br>
+Sixth, why is it that God required blood as penalty or payment for sin?
+ Is blood a part of the fall? Was there a mixing of blood like between man and animal?
+<br><br>
+Seventh, Why is there a need for man to be <i> “born again” </i> in order to enter
+ the Kingdom of heaven? Does it mean that our first birth was a mistake or error?
+<br><br>
+Although the Bible speaks that they were not to eat of the TREE of the
+ knowledge of good and evil, but never can we find in the entire Scriptures
+  that it was an apple that have caused our transgressions and fall <b> (Genesis 2:17). </b>
+<br><br>
+It will be difficult for many readers to believe this, but of a truth,
+ it was <b> SEX or ADULTERY  with the SERPENT that caused the fall of EVE 
+ and ADAM, </b> through which sin came into the world and brought each of us under its curse.
+           </p>
+<br>
+
+<h3>THE SEED OF THE SERPENT</h3>
+<p>
+    Here is where we receive the true revelation of the <b> SERPENT’S SEED, </b>
+     and here is what really happened in the Garden of Eden. The Word
+      says that Eve was <i> "beguiled" </i> by the serpent. She was actually seduced
+       by the serpent. Satan took advantage of the serpent’s physical characteristics
+        to use him to beguile Eve.
+</p>
+<img src="images/superfecundation.jpg" alt="">
+<br>
+<p>
+    Remember that it was Lucifer’s ambition to build himself a greater kingdom
+     than Michael did in heaven, before he was kicked out on earth. And still,
+      he wanted to pursue his evil plan in this world after that. And the only
+       way for Satan to accomplish what he wanted to do was to enter the serpent
+        in Eden even as he entered by evil spirits into the swine at Gadara.
+         He could not have a child directly by Eve as did God by Mary, so he
+          entered into the serpent and then beguiled Eve. He seduced her and
+           by her did Satan have a child vicariously - CAIN, the seed of the
+            serpent, who bore the full spiritual characteristics of Satan and
+             the animalistic (sensual, fleshly) characteristic of the serpent, and a murderer, too.
+
+It says in <b> Genesis 3:1, </b> <i> “Now the serpent was more subtil than any beast of
+ the field which the Lord God had made.” </i> This beast was so close to a human
+  being (and yet was pure animal) that he could reason and talk. He was close
+   to a man. He was almost man. He was an upright creature and was somewhat 
+   in between a chimpanzee and a man, but closer to a man. He was so close 
+   to being human that his seed could, and did mingle with that of the woman 
+   and cause her to conceive. Before Adam ever had a carnal knowledge of Eve,
+    the serpent had that knowledge ahead of him. And that one born of it was <b> CAIN. </b>
+   <i>  “Cain was of (born of, begotten of) that “Wicked One”, </i> according to <b> I John 3:12. </b>
+</p>
+<img src="images/CAIN1.jpg" alt="">
+<br>
+<p>
+    Notice what God said to the <b> SERPENT </b> in the garden. <b> Genesis 3:15, </b> <i> “And I will
+     put enmity between thee and the woman, and between thy seed and her seed,
+      It shall bruise thy head, and thou shalt bruise His heel.” </i> If we give 
+      credit to the Word that the woman did have a seed, then the serpent 
+      must have surely had a <b> SEED </b> also. If the <b> SEED </b> of the woman was a <b> MAN-CHILD </b>
+       apart from the man, then the <b> SEED </b> of the serpent will have to be in the 
+       same pattern, and that is another male must be born apart from human male instrumentality.
+</p>
+<br>
+<h3>THE SEED OF THE WOMAN</h3>
+<p>
+    As the Seed of the woman was literally God reproducing Himself in human
+     flesh, so the seed of the serpent is the literal way that Satan found
+      he was able to open the door to himself into the human race. It was 
+      impossible for Satan (for he is only a created spirit-being) to reproduce
+       himself in the manner which God reproduced Himself, so the Genesis 
+       account tells how he produced his seed and introduced or injected himself into the human race.
+</p>
+<br>
+<h3>THE MISSING LINK BETWEEN MAN AND ANIMAL</h3>
+<p>
+    When this illicit act happened between Eve and the serpent, God cursed
+     the serpent. He changed every bone in the serpent’s body so that he 
+     had to crawl like a snake. <i> “And the Lord God said unto the SERPENT,
+      because thou hast done this, thou art CURSED above all cattle,
+       and above every beast of the field; upon thy BELLY shalt thou go,
+        and dust shalt thou eat all the days of thy life”. </i>
+</p>
+<img src="images/serpent1.jpg" alt="">
+<p>
+    Science can try all it wants to, and it won’t find the <b> MISSING LINK </b>
+     between man and animal. God saw to that. Man is smart and he can see
+      an association of man with animal and he tries to prove it out of 
+      evolution. There isn’t any evolution. But man and animal did mingle.
+       That’s one of the mysteries of God that has remained hidden, but here
+        it is revealed. It happened right back there in the midst of Eden
+         when Eve turned away from Life to accept Death.
+
+Immediately after <b> EATING the FRUIT </b> (remember that we are the FRUITS of our
+ mother and father), they quickly knew that they were <b> NAKED. </b> And they hid 
+ themselves from God and made aprons of fig leaves to cover their <b> NAKEDNESS </b>
+ <b> (Gen. 3:7-8).  SURELY this must speak to our understanding that it was SEX,
+   and NOT EATING APPLES </b> (or else Adam and Eve could have made aprons for 
+   their mouth rather covering their private parts).
+
+Also take note that after this affair , God did not curse Eve by punishing
+ her with more apples to eat, but said, <i> “Unto the woman He said, I will 
+ multiply thy sorrow and thy CONCEPTION; in sorrow thou shalt BRING FORTH
+  CHILDREN, and thy desire shall be to thy husband..” </i> <b> (Gen. 3:16). </b> This 
+  tremendous act has brought forth the advent for man’s sexual reproduction,
+   which was never God’s original plan, because God just speaks His children
+    into existence and they come forth out of the dust, just like the way He created the first man, Adam.
+
+The fruit or result of Eve being sexually known by the serpent and Adam
+ was that she conceived both <b> CAIN and ABEL. </b> The truth of the matter is 
+ that Eve had in her womb <b> TWO sons (TWINS) from SEPARATE IMPREGNATIONS. </b>
+  She was carrying TWINS, with Cain’s conception sometime previous to that of Abel’s.
+
+To those who think that this is not possible, let it be known that the
+ medical records are replete with cases where women have carried twins
+  who were of separate ova and separate insemination with the fertilization
+   of the eggs being days apart, and NOT ONLY SO, but some of the records 
+   show that the twins were fathered by separate males. Recently worldwide
+    coverage was given to a Norwegian mother who was suing her husband for 
+    support for herself and her twins, one of which was white and the other
+     black. She admitted that she had a Negro lover. The two conceptions 
+     were about three weeks apart. In Beaumont, Texas, in 1963, the records 
+     again set forth a multiple birth wherein pregnancies were many days 
+     apart, in fact so much so that the woman almost died along with one child in childbirth.
+</p>
+<img src="images/twins1.jpg" alt="">
+<br>
+
+   <h3> SCRIPTURE’S TWINS </h3>
+    <p>
+From that time on when Satan has successfully injected his <b> SEED </b> into mankind, 
+there has always been <b> TWINS warring in the Scriptures. </b> We can see <b> Cain & Abel, 
+ Esau and Jacob, Ishmael and Isaac,  Moses and Pharaoh, Judas and Jesus, 
+ to be the SEED of the WOMAN and the SEED of the SERPENT, having the ENMITY one with the other. </b>
+</p>
+<br>
+<h3>ENOCH, THE SEVENTH FROM ADAM </h3>
+
+<p>
+It is amazing that Jude 14 records that <b> ENOCH was the SEVENTH from Adam, </b>
+which confirms that <b> CAIN was really NOT the son of Adam, but the SON of the SERPENT. </b>
+The genealogies of ADAM was on this wise : <b> (1) Adam, (2) Seth, (3) Enos,
+ (4) Cainan, (5) Mahaleel, (6) Jared, (7) Enoch. </b>
+Notice that Cain was never mentioned in the list of the Bible as a son 
+of Adam; and Abel, of course, was no longer mentioned because he was 
+murdered by Cain, and did not have any descendant.
+</p>
+
+<br>
+<h3> GENERATION OF VIPERS </h3>
+<img src="images/pharisees1.jpg" alt="">
+<p>
+    In the New Testament, we can find traces of the serpent seed through the persons
+     of the religious <b> Pharisees and Saducees </b> as John the Baptist addressed them as such.
+In the New Testament, we can find traces of the serpent seed through
+ the persons of the religious <b> Pharisees and Saducees </b> as John the Baptist
+  addressed them as such. Jesus called them the Pharisees in <b> Matthew 12:34 </b>
+   – <i> ” O generation of vipers, how can ye, being evil, speak good things? 
+   for out of the abundance of the heart the mouth speaketh.” </i> Also in
+  <b>  Matthew 23:33 </b> - <i> “[Ye] serpents, [ye] generation of vipers, how can ye escape the damnation of hell?” </i>
+</p>
+<br>
+<img src="images/orig-sin-chart.jpg" alt="">
+<br>
+<a href="mystery.html" style="text-decoration: none;">Back to Mysteries</a>
+        </div>
+    </div>
+</body>
+<script>
+    // JavaScript to toggle the navigation menu
+    document.getElementById('hamburger').addEventListener('click', function () {
+        const nav = document.getElementById('nav');
+        nav.classList.toggle('active'); // Toggle the 'active' class
+    });
+</script>
+</html>

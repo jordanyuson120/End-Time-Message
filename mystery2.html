@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth About the Godhead</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .header {
+            width: 100%;
+            background-color: #008000; /* Green */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #333;
+            background: #f5e9d4;
+            background-image: repeating-linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.3),
+                rgba(255, 255, 255, 0.3) 1px,
+                transparent 1px,
+                transparent 50px
+            );
+            padding-top: 80px;
+        }
+
+        .logo {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Add space between the image and text */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+        }
+
+        .comic-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 0 auto;
+            width: 90%;
+            max-width: 800px;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+        }
+
+        .day-box {
+            background: #f0f2f5;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+
+        .day-box img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            border-bottom: 2px solid #008000;
+            margin-bottom: 15px;
+        }
+
+        .day-box h2 {
+            color: red;
+            font-size: 1.8em;
+            text-align: center;
+            
+        }
+
+        .day-box p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+            color: #008000;
+        }
+
+        .back-btn {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #008000;
+            color: white;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            margin-left: 230px;
+        }
+
+        .back-btn:hover {
+            background-color: #006400;
+        }
+        #mystery-link {
+            border-bottom: 3px solid white;
+        }
+
+        #mystery-link:hover {
+            border-bottom: 2px solid white;
+        }
+        .hamburger {
+            display: none; /* Hide hamburger icon by default */
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+@media screen and (max-width: 768px) {
+    
+    .nav {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        position: fixed; /* Fullscreen menu */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #008000;
+        padding: 20px;
+        box-shadow: none;
+        z-index: 1001;
+        justify-content: flex-start; /* Start at the top */
+        align-items: center; /* Center horizontally */
+        text-align: center;
+        padding-top:100px;
+        margin-top:50px;
+    }
+
+    .nav.active {
+        display: flex; /* Show navigation when active */
+    }
+
+    .nav .logo {
+        display: flex;
+        flex-direction: column; /* Stack logo vertically */
+        align-items: center; /* Center logo content */
+        color: white;
+        margin-bottom: 30px; /* Space below logo */
+    }
+
+    .nav .logo img {
+        width: 60px; /* Larger logo size */
+        height: auto;
+        margin-bottom: 10px; /* Space between logo and text */
+    }
+
+    .nav a {
+        color: white;
+        font-size: 1.5em; /* Larger font size for fullscreen */
+        margin-bottom: 20px; /* Add spacing between links */
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1002; /* Above the fullscreen menu */
+        cursor:pointer;
+    }
+    .main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="" width="30">
+            The End Time Message
+        </div>
+        <i class="fa fa-bars hamburger" id="hamburger"></i>
+        <nav class="nav" id="nav">
+            <a href="home.html" id="home-link">Home</a>
+            <a href="story.html" id="story-link">Story</a>
+            <a href="Quiz.html" id="quiz-link">Quiz</a>
+            <a href="mystery.html" id="mystery-link">Mysteries</a>
+            <a href="bible.html" id="bible-link">Bible</a>
+
+
+        </nav>
+    </header>
+
+    <button class="back-btn" onclick="window.location.href='mystery.html';">Back to Mysteries</button>
+
+    <div class="comic-strip">
+        <h1>THREE (3) MAINLINE DENOMINATIONAL BELIEFS ON THE GODHEAD
+            and their discrepancies</h1>
+
+        <!-- Abraham and Keturah -->
+        <div class="day-box">
+            <p>There are three most common beliefs about the Godhead today. These are the <b>(1) Trinity Doctrine,
+                 (2) The Oneness Doctrine, and (3) The Twoness Doctrine.</b> Which of these teachings do you
+                  embrace?</p>
+            <h2>1. The TRINITY Doctrine</h2>
+            <img src="images/trinity.jpg" alt="">
+            <p style="text-align: center;">
+                PREMISE: <span style="color:red;">THREE PERSONS IN ONE GOD, SHARING THE SAME POWERS, OCCUPYING THREE THRONES IN HEAVEN</span>
+                <br>
+                <span style="font-weight: bold;"> Discrepancy in the doctrine:</span>
+                <br>
+                <span style="color:red;"> THREE PERSONALITIES = THREE GODS </span>
+                <br>
+                This belief breaks the very First Commandment of God that says, <i> "Thou shalt have no other
+                     gods before Me". </i> <b> Revelation 4:2 </b> states that there is only <i>"one throne"</i>
+                     in heaven. How can three persons be one God?
+            </p>
+
+            <br>
+
+            <h2>2. The ONENESS Doctrine</h2>
+            <img src="images/oneness.jpg" alt="">
+            <p style="text-align: center;">
+                PREMISE: <span style="color:red;">JESUS THE MAN IS ALL THREE
+                    (Father, Son and Holy Ghost)</span>
+                <br>
+                <span style="font-weight: bold;"> Discrepancy in the doctrine:</span>
+                <br>
+                If Jesus is the Father, why did Jesus pray to the Father if He is already His own Father?
+                 Why did He cry at the cross, <i> "My God, My God, why hast Thou forsaken me?"</i>
+                  Was Jesus just acting it out? Obviously not.
+            </p>
+            <br>
+            <h2>3. The TWONESS Doctrine</h2>
+            <img src="images/twoness.jpg" alt="">
+            <p style="text-align: center;">
+                PREMISE: <span style="color:red;">THERE ARE TWO GODS:
+                    THE ETERNAL FATHER & ETERNAL SON;
+                    MAKING THE HOLY SPIRIT JUST A MESSENGER OF THE TWO</span>
+                <br>
+                <span style="font-weight: bold;"> Discrepancy in the doctrine:</span>
+                <br>
+                A <i> ‘SON” </i> is <i> ‘BEGOTTEN’. </i> The word <i> “SONSHIP” </i> signifies a <i> ‘BEGINNING”.</i> 
+                There is no such thing as
+                <i> "eternal son".</i> The word <i> "ETERNAL" </i> means no beginning and no end".
+                </p>
+
+                <br>
+                <h2 style="color:black">THE <span style="color:red">CORRECT</span> UNDERSTANDING OF THE <span style="color:blue">GODHEAD</span></h2>
+                <br>
+                <h2 style="text-align: left; color:black">INTRODUCTION</h2>
+                <br>
+                <p>
+                    God, all throughout the Old Testament did not have a body, but appeared to the people
+                     in different forms, such as the Burning Bush to Moses, the Cloud by day, 
+                     and the Pillar of Fire by night, to the children of Israel. Though He sent His angels
+                      to many who appeared as men, but no one ever saw God in physical form until Jesus
+                       Christ was born.
+<br><br>
+<b> John 1:18 </b> says, <i>“No man hath seen God at any time; the only begotten Son, which is in the 
+    bosom of the Father, He hath declared Him”.</i>
+                </p>
+
+                <br>
+                <h2 style="text-align: left; color:black">GOD IS A SPIRIT</h2>
+                <p>The Scripture states that, <i> “God is a Spirit; and they that worship Him, 
+                    must worship Him in Spirit and in Truth” </i> <b> (John 4:24). </b> In <b> Isaiah 43 and 45, </b>
+                    we can read that God the Father said that He alone is God... "And [there is] 
+                    no God else beside me; a just God and a Saviour; [there is] none beside Me."
+                   <b> (Isa. 45:21) </b> <i> "Before Me there was no God formed, neither shall there be after Me.
+                     I, [even] I, [am] the LORD; and beside me [there is] No Saviour." </i> <b> (Isa. 43:10-11) </b>
+                    <br><br>
+                    In these scriptures we can clearly see that there is only one God, 
+                    (not two or three as others believe) for in His very First Commandment, Elohim
+                     (the self-existing One) solemnly said that "Thou shalt have NO other gods before Me..."
+                     <b> (Exo. 20:3) </b>
+                </p>
+                <br>
+                <h2 style="text-align: left; color:black">GOD'S THOUGHTS AND ATTRIBUTES</h2>
+                <p>
+                    Way back in eternity, before there ever was a star, a moon, or a galaxy, Elohim has
+                     eternal thoughts and attributes that He wanted to express and manifest for His own
+                      pleasure and glorification. He hath seen all things from the beginning, for He is 
+                      infinite and all knowing.
+<br><br>
+Elohim wanted to be God. The word <i> "God" </i> means <i> "an object of worship". </i> But there was no one that 
+worships Him at that time and so He then created the angels first, so that He as God is worshipped
+ and is proclaimed as God almighty.
+<br><br>
+Elohim wanted to become a Father. Yet how can He be called a <i> "Father" </i> when He Himself has no children?
+ And so in God's mind He wanted to create sons and daughters unto himself so that He could become 
+ their Father. Thus, we know that this plan of God was fulfilled and manifested later on. 
+ He created Adam and from him He took Eve. It's a type of the church which was taken from 
+ the body of Christ, for the Bible says, <i> "we are flesh of His flesh, and bones of His bones." </i>
+<br><br>
+Elohim wanted to become a Saviour. But you see, how can He become a Saviour when there's no one
+ to be saved in the first place? There has to be a fallen entity first before He could ever
+  display his attributes as a Saviour. We can therefore conclude from this case that God
+   hath foreseen the fall of man and He permitted man to fall from grace in order for God
+    to fulfill His majestic plan of saving them. Man was placed as a "free moral agency"
+     to choose for himself between good and evil. Adam and Eve fell for the wrong choice.
+      But God prepared the solution for sin even before the foundation of the world.
+      <b> Revelation 13:8 </b> tells us that the <i> "Lamb was slain "before" the foundation of the world" </i>
+        to act as an atonement for sin. And God wrote our names (God's elected seed) in
+         the Lamb's Book of Life even before man could ever commit sin. Christ came to
+          redeem these predestinated seed.
+<br><br>
+Elohim wanted to be a Healer, too. Yet how can He become a Healer when there's nobody sick? 
+There has to be a sickness first before He could be a Healer. Which was first, the sickness
+ or the Healer? We can then conclude from here that sicknesses and afflictions are part of
+  God's permissive will to man in order to show and manifest to mankind His attributes of 
+  being a Healer. <b> Psalms 103:2-3 </b> states, "Bless the LORD, O my soul, and forget not all his
+   benefits: who forgiveth all thine iniquities; who healeth ALL thy diseases." Consider 
+   the afflictions of Job, blind Bartimaeous, the woman with the blood issue, and more. 
+   They just declared the glory and healing power of God and served as testimonials of God's
+    grace through each generation.
+<br><br>
+God also wanted to manifest Himself as a King, as a Priest, and as a Judge. So there has to be a 
+kingdom set-up, a holy tabernacle set-up, and a judgment bar set up. These are His eternal thoughts
+ and intentions before the foundation of the world, to get glory unto Himself.
+<br><br>
+Yet God knew that as a Spirit He will never be able to fulfill these plans of his without having
+ a <i> "body" </i> that will act out His plans. For example, it is written in His Law that <i> “Almost 
+ all things are by the Law purged with blood; and without the shedding of blood is no 
+ remission” </i> <b> (Hebrews 9:22). </b> Redemption requires death. Can a Spirit bleed and die?
+<br><br>
+It takes <b> BLOOD, </b> therefore, to pay the penalty for sin. Yet no man's blood, no angel, no priest,
+ no animal's blood, was ever worthy to redeem man in his fallen estate. God must do it Himself,
+  for there is no Saviour but Him alone. He must do it in order to show that He alone is the <b> ONLY </b>
+   Redeemer. In <b> Isaiah 45:22, </b> God said, <i> “Look unto Me, and be ye saved, for <b> I AM God, </b> and there is 
+   none else.”  “Thou shalt know no God but Me; for there is NO SAVIOUR BESIDE ME”. </i> <b> (Hosea 13:4). </b>
+<br><br>
+God is the only Saviour there is. The key to the whole mystery of the Godhead is this. 
+God knew that He, as God, could not die and bleed in the Spirit, for a Spirit has no 
+flesh and bones. His own law required blood for an atonement.
+<br><br>
+So in order for God to fulfill His plan of redeeming mankind, He had to put on a veil
+ of flesh, in order to taste death and pay the penalty for His own law, to justify the 
+ ungodly. That is to fulfill <b> Romans 3:28, </b> <i> “Therefore we conclude that a man is justified
+ by faith without the deeds of the law.” “For by grace are ye saved through faith; and 
+ that not of yourselves: it is the gift of God: not of works, lest any man should boast” </i> <b> (Eph.2:8,9).</b>
+                </p>
+<img src="images/manifestations.jpg" alt="">
+<br>
+
+<h2 style="text-align: left; color:black">THOUGHTS EXPRESSED INTO "WORD"</h2>
+<p>
+    God, then began to express Himself from eternity, by His spoken Word. Time began when
+     God started speaking. This great Fountain of Spirit which had no beginning or no end,
+      began to express His attributes by the Spoken Word. Out of the existence of the Father
+       went out the <i> "Logos", </i> which was the Word, which was God's <i> "Theophany". </i> It was was 
+       a visible body of the great Jehovah God going forth in the beginning. It was called 
+       the <i> "Logos", </i> which in the original Greek, means <i> “something spoken; which includes the
+        thoughts of the Speaker".</i>
+<br><br>
+That Logos was God's <i> "express image". </i> It was God Himself made into Word. That Logos
+ that went out from the great eternal Spirit was called the <i> "Son" </i> of God. It was the
+  only visible form that this Spirit had. And It was a <i> "theophany", </i> which means a
+   celestial body, and that body was like a <i> "man". </i>
+<br><br>
+Time, then, began when that <i> "Logos" </i> came out of God, as evident in the succeeding
+ scripture. <b> John 1:1-3, </b> <i> "In the beginning was the Word and the Word was with God,
+  and the Word was God. The same was in the beginning with God. All things were 
+  made by Him; and without Him was not any thing made that was made” ..And the Word
+   was made flesh and dwelt amongst us.” </i> <b> (John 1:1-3, 14). </b>
+<br><br>
+From that <i> "theophany" </i> is where man was also created by God, after His own image, 
+which was a <i> "spirit-man":</i>
+<br><br>
+<i> "And God said, Let US make man in our image, after our likeness: and let them have dominion
+ over the fish of the sea, and over the fowl of the air, and over the cattle, and over all
+  the earth, and over every creeping thing that creepeth upon the earth. So God created man
+   in his [own] image, in the image of God created he him; male and female created he them." </i>
+  <b> (Genesis 1:26,27). </b>
+<br><br>
+The <i> "Let US make man in OUR own image" </i> in the above verse refers to God the Father
+ (the great Spirit) talking, speaking to His Theophany Body, which was His begotten Son.
+  We can see here that man was created from that pattern, with both spirit and body realms.
+   We were never created from the image of angels.
+<br><br>
+Rev. Branham taught this: "You will never be an Angel. God made Angels, but God made man.
+ And what God does is off of God, which is as eternal as God is. And man's just as eternal
+  as his Creator, because he was made from eternity. <b> (HEBREWS CHAPTER 5 AND 6, JEFF, IN 57-0908M). </b>
+   "Brother, I'm telling you; I believe in the resurrection. God will speak one of these days,
+    and we'll come forth in His image and in His likeness, men and women, not angels, but men 
+    and women. God made Angels; we'll never be Angels. We wasn't made for Angels. Men are made
+     men. God made man. He intends him to be man. It's God's pattern." <b> (EL.SHADDAI.title LA.CA 59-0416)</b>
+<br><br>
+The <i> "theophany", </i> which was the Son, is also what's spoken of in <b> Colossians 1:15-17, </b>
+ which reads: <i> "Who is the IMAGE of the invisible God, the firstborn of every creature:
+  For by Him were all things created, that are in heaven, and that are in earth, 
+  visible and invisible, whether [they be] thrones, or dominions, or principalities,
+   or powers: all things were created by him, and for him: and He is before all things,
+    and by him all things consist." </i>
+<br><br>
+That theophany of God was then made <b> FLESH </b> on earth later on in the Person of Jesus Christ
+ Jesus through the womb of Mary.
+<br><br>
+<b> Revelation 3:14 </b> speaks of Jesus as the <i> "Beginning of the Creation of God". </i> That 
+is Who the Lord Jesus says He is. But those words don't mean exactly as they sound
+ to us. Just taking them the way they sound has made some people (in fact multitudes of people)
+  get the idea that Jesus was the first creation of God, making Him lower than Godhead.
+   Then this first creation created all the rest of the universe and whatsoever it contains.
+    But that is <b> NOT </b> right. You know that doesn't line up with the rest of the Bible.
+     The words are, <i> "He is the BEGINNER or AUTHOR of the creation of God." </i>
+<br><br>
+Now we know for a surety that Jesus is God, very God. He is the Creator. <b> John 1:3 </b>
+ <i> "All things were made by Him, and without Him was not any thing made that was made." 
+ He is the One of Whom it is said, Genesis 1:1 "In the beginning God created the 
+ heaven and the earth". </i> Also it says in Exodus 20:11, "For in six days the Lord 
+ made heaven and earth, the sea and all that in them is, and rested the seventh day."
+  See, there is no doubt that He is the Creator. He was the Creator of a <b> FINISHED PHYSICAL CREATION. </b>
+<br><br>
+Surely we can see what these words mean now. To have any other interpretation would mean that God created God. How could God be created when He, Himself, is the Creator?
+</p>
+
+<img src="images/godhead2.jpg" alt="">
+
+
+<br>
+<h2 style="text-align: left; color:black">GOD MANIFESTED IN FLESH</h2>
+<p>
+    And thus, God fulfilled His plan of salvation, the fulfillment which is written in <b> 1 Timothy 3:16 </b>
+    which states: <i> “And without controversy, great is the mystery of Godliness, God was manifest in the flesh.” </i>
+<br><br>
+When was God manifested in flesh? It was when Jesus Christ was born through a woman; without
+ any resulting sexual act but it was God Himself making both hemoglobin and egg cells in the
+  womb of Mary, God Himself taking the form of a man.
+<br><br>
+Jesus Christ was the <b>FLESH </b> of God, none other than God Himself creating a <b> BODY </b> of His own. 
+That fleshly <b> BODY </b> was called the <i> “SON”, </i> while the <b> SPIRIT </b> indwelling that body was the <i> “FATHER”. </i>
+ Not two Gods now, but God veiling Himself in <b> FLESH. </b> That’s the reason Jesus said <i> "I and My 
+ Father are one." </i> <b> (John 10:30). </b> Philip, the apostle, one time said to Jesus <b> (John 14:8-9),</b>
+ <i> “Lord, shew us the Father, and it sufficeth us.” </i> And Jesus answered him saying, <i> “ Have I
+   been with you so long and yet hast thou not known Me, Philip? He that hath SEEN ME hath seen the Father.” </i>
+<br><br>
+The name <i> "Jesus" </i> means <i> "Jehovah has become our Saviour". </i> Jesus was also called
+<i> “Emmanuel”, </i> meaning, <i> “God WITH us”, </i> God dwelling with men.
+<br><br>
+When the Father decided to come down as our Saviour, He put on a robe of flesh
+ and planted Himself, as a seed, in the womb of Mary. This seed was to produce
+  the flesh and blood of the Body He would dwell in as the Son, Jesus Christ. 
+  Jesus is God becoming man, to redeem man back to Himself. God could not die in
+   the Spirit because He's eternal. But He had to put on a <b> MASK </b> and <b> ACT </b> the part
+    of death. He did die, but He couldn't do it in His God form. He had to do it
+     in <b> SON </b> form, as a Son of Man on earth.
+</p>
+
+<br>
+<h2 style="text-align: left; color:black">JESUS, THE IMAGE OF THE INVISIBLE GOD</h2>
+<p>
+    Apostle Paul says this about Jesus in <b> Collosians 2:9-10: </b> <i> “For in HIM all the FULLNESS 
+    of the GODHEAD dwells BODILY, and ye are complete in Him, which is the Head of all
+     principality and power”...”In Whom we have REDEMPTION through His BLOOD, even the
+      forgiveness of sins : Who is the IMAGE of the INVISIBLE GOD... And He is before 
+      all things, and by Him all things consists” </i> <b> (Collosians 1:14,15,17). </b>
+<br><br>
+<b> JESUS, </b> therefore, is the <b> EXPRESS IMAGE </b> of the unseen God, God creating a <b> FLESH-BODY </b> of
+ His own. And man could have never seen God except through Jesus Christ, the <b> FLESH </b> of God.
+</p>
+<br>
+
+<h2 style="text-align: left; color:black">THREE DISPENSATION OF THE ONE GOD</h2>
+<p>
+   <i> “God ABOVE Us” </i> - that’s how God was known in the Old Testament, in the Fatherhood 
+    dispensation. God dwelling in the heavenlies, where no man could ever touch Him.
+<br><br>
+When the the time for the Sonship dispensation came, fulfilling the prophesy of
+<b> Isaiah 9:6 </b> which says, “For to us a child is born, for to us a <b> SON </b> is given:
+  the government shall be upon His shoulder; and His Name shall be called Wonderful,
+   Counselor, Mighty <b> GOD, </b> and everlasting <b> FATHER, </b> Prince of Peace”, these all pertain
+    to the <b> FLESH </b> of God - <b> JESUS, </b> being God Himself becoming Emmanuel, which being 
+    interpreted <i> “God WITH us” </i> - God Who can now be touched by the feeling of our infirmities.
+<br><br>
+It was God also fulfilling <b> Isaiah 53:5, </b> <i> “But He (God) was <b> WOUNDED </b> for our transgressions,
+ He was bruised for our iniquities: the chastisement of our peace was upon Him: and by His 
+ stripes we are healed” </i> - all fulfilled and completed at the Cross of Calvary.
+<br><br>
+In these last days, after Jesus has been resurrected and glorified, God has sent
+ us back His Holy Spirit, the Comforter, to indwell every believer. Thus, we are 
+ now living in the <b> HOLY GHOST </b> Dispensation.
+As <b> 1 Cor. 6:19-20 states, </b> “What? Know ye not that your body is the <b> TEMPLE </b> of the
+ Holy Ghost which is <b> IN YOU, </b> which ye have of God, and ye are not your own? For ye
+  are bought with a price: therefore glorify <b> GOD IN YOUR BODY, </b> and in your spirit which are God’s.”
+</p>
+<img src="images/godhead-chart (1).jpg" alt="">
+<br>
+
+<h2 style="text-align: left; color:black">THE SPIRIT OF JESUS IN THE CHURCH</h2>
+<p>
+  <b>JESUS </b> is that self-same Holy Spirit; as He has attested in <b> John 14:18, </b> saying, 
+    <i> “I will not leave you comfortless,  “I“ (Personal Pronoun) <b> WILL COME TO YOU. </b>” </i>
+   <i> “I will be with you, even <b> IN YOU </b> until the end of the world.” </i> <b> Galatians 4:6 
+    states </b> this, too, <i> “And because ye are sons, God has sent forth the <b> SPIRIT </b> of 
+    His <b> SON </b> into your hearts, crying Abba, Father.” </i>
+<br><br>
+Jesus’ own Spirit is now <i> “God IN Us”, </i> the <i> “Hope of Glory” </i> <b> (Colossians 1:27). </b> It is the 
+<b> SELF-SAME GOD </b> all the time, never changing His power, just changed His form from the heavenly
+ to the earthly, and then back again as the Great Spirit, after having fulfilled His great redemptive story.
+<br><br>
+He was <i> “GOD ABOVE US” </i> in His Fatherhood dispensation; <i> “GOD WITH US” </i> in His Sonship dispensation; 
+and now <i> “GOD IN US” </i> in the Holy Spirit dispensation.
+<br><br>
+Jesus said, <i> “ <b> I AM ALPHA AND OMEGA, </b> the Beginning and the Ending, saith the Lord, <b> Which IS, 
+WHICH WAS, and WHICH IS TO COME, THE ALMIGHTY” </b> </i> <b> (Rev.1:8) </b> Not three persons in One God but <b> ONE
+ GOD </b> in three dispensations.
+</p>
+<br>
+
+<h2 style="text-align: left; color:black">JESUS IS BOTH MAN AND GOD</h2>
+<p>
+    Jesus, talking to the Jews one day, said, <i> “Your father Abraham rejoiced to see
+     my day: and he was glad.” </i> Then said the Jews unto Him, ‘thou art not yet fifty
+      years old and hast thou seen Abraham?’ Jesus said unto them, <i> “Verily, verily,
+       I say unto you, before Abraham was, I AM” </i> <b> (John 8:56-58). </b>
+<br><br>
+Who was the great <i> “I AM”? </i> Remember the burning fire that talked with Moses on the holy 
+mountain? That was the <i> “I AM”, </i> the self-same Jesus speaking to the Jews. They could not see
+ that Jesus was their own God <b> VEILED IN FLESH. </b>
+<br><br>
+<i> "The Jews answered him saying, “For a good work we stone thee not; but for blasphemy;
+ and because that Thou, being man, makest Thyself God” </i> <b> (John 10:33). </b> They really
+  failed to see that He was the Emmanuel - both <b> MAN and GOD. </b> Jesus also is the <b> WORD </b>
+  that became <b> FLESH </b> and dwelt amongst us <b> (John 1:1,14). </b>
+<br><br>
+<b> JESUS </b> certainly was a man weeping at the grave of Lazarus. But when He shouted, <i> “Lazarus,
+ come forth!”, </i> and a dead man, four days and stinking, arose and lived again - that 
+ was more than a <b> MAN! </b> Who can raise the dead but God alone.
+<br><br>
+He was a man hungry that night looking on a tree for something to eat. But when He took
+ five bread and two fishes and feed five thousand - that was more than a man. That
+  was the creator, <b> JEHOVAH! </b>
+<br><br>
+He was a man laying on the ship that night, tired and asleep, while the waves come up.
+ But once he arose and rebuked the winds and the waves and said, <i> “Peace be still!”. </i>
+  That was more than a man. That was God Who can control all nature.
+<br><br>
+It was a man crying for mercy at the cross, <i> “My God, My God, why hast Thou forsaken Me?” </i>
+ But on Easter morning, when He broke the seals of death, hell and grave, and rose up 
+ again and said, <i> “ <b> I AM HE </b> that was dead, and behold, <b> I AM ALIVE FOREVERMORE! </b>” </i> Who was that?
+  That was the same God Who also said, <i> “ I have power to lay my life down, and raise it up
+   again” </i> <b> (John 10:18). </b>
+</p>
+<br>
+
+<h2 style="text-align: left; color:black">JESUS, BACK TO A “PILLAR OF FIRE”</h2>
+<p>
+    Let us remember that after Jesus’ death, burial and resurrection, Jesus ascended up 
+    into the heavens. And when <b> SAUL </b> of Tarsus was on His road to Damascus to persecute 
+    the Christians <b> (Read Acts 9:1-5), </b> a <b> BIG LIGHT, </b> a <b> PILLAR of FIRE </b> struck him,
+     and he asked, <i> “ <b> LORD, </b> who are You?” </i> <b> SAUL </b> knew that It was the same <b> Pillar of FIRE </b>
+      that appeared to Moses, but that <b> Pillar of FIRE </b> answered him, saying, <i> “I AM JESUS,
+       whom thou persecutest.” </i> See, He had <b> TURNED BACK, </b> exactly back to <b> THE SAME FORM </b>
+       before He took on a tabernacle of <b> FLESH </b> - the <b> Pillar of FIRE </b> that met Moses in the wilderness.
+    Remember, It was the <b> SAME </b> Pillar of Fire that came to <b> PETER </b> that night and loosed him
+     out of the prison cell <b> (Read Acts 12:5-7). </b>
+    <br><br>
+    That <b> SAME </b> Pillar of Fire (Cloven Tongues of Fire) appeared on the Day of <b> PENTECOST </b>
+     and set on each of those at the upper room, dividing Himself, giving part of His
+      Spirit among His church <b> (Acts 2). </b>
+    Peter declared in <b> Acts 2:36, </b> <i> “Let all the house of Israel know assuredly
+     that God hath made that <b> SAME JESUS, </b> whom ye have crucified, <b> BOTH LORD AND CHRIST”. </b> </i>
+      There He is - <b> LORD (Fatherhood), JESUS (Sonship), CHRIST (Anointed Holy Ghost) -
+       The LORD JESUS CHRIST, </b> the complete manifestation of the <b> ONE TRUE GOD. </b>
+</p>
+<img src="images/name_titles.jpg" alt="">
+<p>
+    Finally, consider this: Who was the <b> FATHER </b> of Jesus? <b> Matthew 1:18 </b> says,
+     <i> “She (Mary) was found with child of the <b> HOLY GHOST.” </b> </i> But Jesus Himself
+      claimed that <b> GOD  was His FATHER. </b> Therefore, God the Father and God the
+       Holy Ghost make the Father and the Spirit <b> ONE, OR ELSE JESUS HAD TWO FATHERS. </b>
+        But notice also that Jesus said that <i> “I and My FATHER ARE ONE”, </i> NOT TWO. 
+        That makes <b> ONE GOD, NOT THREE. </b>
+<br><br>
+The entire Bible does not say a thing about a First or Second or Third Person in a <b> ONE GOD. </b>
+ The mystery is found in <b> 1 Timothy 3:16: </b> <i> “And without controversy, great is the <b> MYSTERY </b> of
+  Godliness, <b> GOD </b> was manifest in the <b> FLESH, </b> justified in the Spirit, seen of angels, preached
+   unto the Gentiles; believed on in the world, received up into glory”. </i> The <b> ONE TRUE GOD </b>
+   was manifest in the <b> FLESH. </b> That’s how <b> SIMPLE </b> it is. <b> GOD CAME IN A HUMAN FORM. </b> That didn’t
+    make Him another God. He was <b> GOD, THE SAME GOD. </b>
+<br><br>
+If you cannot accept this <b> TRUTH </b> of the Godhead, but refute it, Jesus said that you are 
+still living in <b> SIN </b>; for He said in <b> John 8:24, </b> <i> “For if ye believe <b> NOT that I AM HE (God), </b>
+ ye shall die in your sins”. </i> <i> “He that believeth not the <b> SON </b> shall not see life; but the wrath
+  of God abideth on him” </i> <b> (John 3:36).</b>
+</p>
+<img src="images/wheel.jpg" alt="">
+<br>
+
+<h2 style="text-align: left; color:black">JESUS IS JEHOVAH MADE FLESH</h2>
+<p>
+    <b> JEHOVAH of the Old Testament is JESUS of the New Testament. </b> That is the great 
+   <b> MYSTERY of the Godhead. </b> <b> NOT THREE GODS, but THREE DISPENSATIONS and three
+     OFFICES of the same ONE GOD. </b> Never can we find any Scripture that declares
+      that there are <b> THREE GODS </b> in the Holy Writ. If you do, you are breaking the
+       First Commndment which says, <i> “I alone am GOD, thou shalt have no other Gods
+        before Me.” </i> <b> GOD </b> Himself declared in <b> Isaiah 45:21 </b> that, <i> “There is <b> NO GOD BESIDE
+         ME; </b> a just God and Saviour, <b> THERE IS NONE BESIDE ME.” </b> </i>
+<br><br>
+<b> JESUS </b> confirmed this truth in <b> Mark 12:29 </b> saying, <i> “The first of all the commandments is, 
+Hear, O Israel; The Lord our God is <b> ONE LORD”. </b> </i>
+<br><br>
+The whole thing was <b> JEHOVAH GOD </b> condescending Himself from His heavenly estate to an
+ earthly body He called <b> JESUS, </b> fulfilling His sovereign purpose of becoming Saviour,
+  Redeemer and Healer by shedding His OWN BLOOD as the Lamb of God who takes away the
+   sins of the world.
+<br><br>
+<i> ”Of Whom as concerning the <b> FLESH, CHRIST came, Who is OVER ALL, GOD Blessed Forever” </b> </i> <b> (Romans 9:5). AMEN. </b>
+</p>
+<br>
+<h2 style="color:black">REV. <span style="color:red">WILLIAM BRANHAM</span> SPEAKS ABOUT THE <span style="color:blue">GODHEAD</span></h2>
+<hr>
+<b><p>Here are some quotations gleaned from the end-time prophet William Branham.</p></b>
+<br>
+<h4 style="color:blue">1. Brother Branham believed that Jesus Christ is God Himself made man:</h4>
+<p>
+    "JESUS was GOD in the form of a man. That's hard for people to swallow.. He wasn't nothing less than God. He was GOD manifested in FLESH. He was the Creator in His own creation."(God's Gift Always Find Their Places/63-1222)
+
+<br><br>
+"I believe HIM to be GOD: Jesus Christ, the same yesterday, today and forever. That He wasn't just a prophet, that He wasn't just a man, that He wasn't just a teacher or a good man, HE was the DIVINE JEHOVAH GOD living in a BODY of Flesh."(Who Is This?/59-1004)
+
+
+<br><br>
+"The Beginning Of The Creation Of God." That is Who the Lord Jesus says He is. But those words don't mean exactly as they sound to us. Just taking them the way they sound has made some people (in fact multitudes of people) get the idea that Jesus was the first creation of God, making Him lower than Godhead. Then this first creation created all the rest of the universe and whatsoever it contains. But that is not right. You know that doesn't line up with the rest of the Bible. The words are, "He is the BEGINNER or AUTHOR of the creation of God." Now we know for a surety thatJesus is God, very God. He is the Creator.
+<br><br>
+John 1:3-"All things were made by Him, and without Him was not any thing made that was made." He is the One of Whom it is said, Gen. 1:1 - "In the beginning God created the heaven and the earth". Also it says in Ex. 20:11, "For in six days the Lord made heaven and earth, the sea and all that in them is, and rested the seventh day."
+See, there is no doubt that He is the Creator. He was the Creator of a FINISHED PHYSICAL CREATION. Surely we can see what these words mean now. To have any other interpretation would mean that God created God. How could God be created when He, Himself, is the Creator?(336-2 LAODICEAN.CHURCH.AGE - CHURCH.AGE.BOOK CPT.9)
+<br>
+
+</p>
+<br>
+
+<h4 style="color:blue">2. Brother Branham believed that the BODY of JESUS was GOD's own flesh:</h4>
+<p>
+    "That's exactly what HE was. "We handled God," the Bible said. 1 Timothy 3:16, "Without controversy, great is the MYSTERY of Godliness, GOD was manifest in the FLESH." We handled HIM with our hands. That body was God. Certainly was. He was God all over, in the form of a human being."(The Token/64-0308)
+
+
+<br><br>
+"It wasn't the blood of a Jew. It was the Blood of God that saved us, not the blood of a Jew. He wasn't no man's Blood. He was the creative Blood of Jehovah God, Who created the Blood cell. He wasn't neither Jew not Gentile by Blood. He was God. God's Blood saved us."(WITNESSES_ PHOENIX.AZ WEDNESDAY_ 54-0303)
+
+
+<br><br>
+"And there, God, the Creator, wrapped around Himself and created a Blood cell, the virgin not knowing any man. If you don't believe that, you're still in sin. She had nothing to do with a man. God, Himself... Christ was not a Jew. His Blood wasn't a Jew, neither was it a Gentile. It was God's Blood. The Blood cell come from the Male, and the Male was God. The Bible said we're saved through the Blood of God, no sex into it at all. There it is.(CHRIST_ PHOENIX.AZ MONDAY_ 55-0221)
+
+
+<br><br>
+"And you Catholic people, not to disagree with you, but call her, "Mary, mother of God," how could God have a mother? She was an incubator.
+You say, "Well, the--the egg come from the woman."
+But the egg didn't come from Mary. If the egg come from Mary, then there had to be a sensation. Look where you put God. God created both egg and blood cell. He was neither Jew nor Gentile. He was God, nothing less."(ZACCHAEUS.THE.BUSINESSMAN_ TUCSON.AZ MONDAY_ 63-0121)<br><br>
+
+</p>
+<br>
+<h4 style="color:blue">3. Brother Branham believed that JESUS is the very PERSON of GOD:</h4>
+<p>
+    "So you see, JESUS was GOD. He was not NO third person, fourth person, second person, HE was THE PERSON, HE was GOD, see? He was GOD Immanuel, God come down from glory, revealed Himself."(God's Gift Always Find Their Places/63-1222)
+    <br><br>
+
+</p>
+<br>
+
+<h4 style="color:blue">4. Brother Branham believed that GOD DIED in His SONSHIP FORM:</h4>
+<p>
+    "GOD veiled in JESUS to do the work of REDEMPTION at the cross... GOD could NOT DIE in the SPIRIT; He's ETERNAL. But HE had to put on a MASK and ACT the part of death. HE DID DIE, but He couldn't do it in His God FORM. He had to do it in SON form, as a Son of Man on earth."(Unveiling of God/ 64-0614m)
+
+
+<br><br>
+"Your BODY has to LIVE by DEAD SUBSTANCE for natural life, then you've got to have something DIE SPIRITUALLY to SAVE your SPIRITUAL LIFE. And GOD BECAME MATERIAL, FLESH, and DIED that WE MIGHT LIVE."(Sir, We Would See Jesus / 62-0724)
+
+
+<br><br>
+1 JOHN 3:16 - "Hereby perceive we the LOVE [of GOD], because HE laid down HIS LIFE for us."
+</p>
+<br>
+
+<h4 style="color:blue">5. Brother Branham believed that GOD had NO BODY until HE became JESUS:</h4>
+<p>
+    "GOD is a SPIRIT. He had no hands till He become JESUS.He had no feet, arms, legs and so forth, till He become JESUS... HE come to a stable, borned over a manure pile. And Little JEHOVAH crying in a manger, little JEHOVAH playing as a boy, little JEHOVAH toiling as a man, He crossed His cast with us. GOD BECOME HUMAN. When JESUS CHRIST was born, GOD was HUMAN on earth... He toiled and labored and felt for the teen-ager. HE went through every temptation that we go through. GOD DID IT, that He might do His own judgment justice."(Show us the Father/ 60-0731)
+
+
+<br><br>
+"It come to a place that HE was TRANSFORMED. See? That means HE CHANGED His way. HE was GOD Jehovah. And God JEHOVAH changed Himself FROM a SPIRIT and BECAME A MAN. He's the SAME JEHOVAH GOD living in a BODY of FLESH."(Let Your Light Shine Before Men/ 64-0614m)
+<br><br>
+
+</p>
+<br>
+
+<h4 style="color:blue">6. Brother Branham believed in only ONE GOD; NOT TWO OR THREE:</h4>
+<p>
+    "There is NO three or four Gods. THERE IS ONLY ONE GOD. There is THREE ATTRIBUTES of GOD: Father, Son and Holy Ghost, BUT they're NOT THREE GODS. GOD the Father was in the wilderness, as a PILLAR of FIRE. All right. GOD The SON: GOD the FATHER CREATED a BODY which was GOD THE SON, and LIVED in the SON. See?"(A Court Trial / pp. 31)
+
+
+<br><br>
+"If there were THREE Gods, you might as well baptize for a FATHER, and a SON, and a HOLY GHOST. But the REVELATION given to John was that there is ONE GOD and His NAME - LORD JESUS CHRIST, and you baptize for ONE GOD and only ONE... If JESUS is BOTH LORD and CHRIST, then HE (Jesus) is, and cannot be else but "Father, Son and Holy Ghost" in ONE PERSON manifested in FLESH. It is NOT "GOD in THREE persons, Blessed Trinity," BUT ONE GOD, ONE PERSON with THREE MAJOR TITLES, with THREE OFFICES manifesting those TITLES. HEAR IT ONCE MORE - This SAME JESUS is "BOTH LORD and CHRIST". LORD (Father) and CHRIST (Holy Spirit) are JESUS, for HE (Jesus) is BOTH OF THEM (LORD AND CHRIST). If that doesn't SHOW us the TRUE REVELATION of the GODHEAD, NOTHING WILL. LORD is NOT another ONE; CHRIST is NOT another ONE. THis JESUS is LORD JESUS CHRIST - ONE GOD."(Seven Church Age Book/ pp. 29)
+<br><br>
+
+</p>
+<br>
+
+<h4 style="color:blue">7. Brother Branham believed that GOD lived in Jesus Christ, Body, Soul, and Spirit:</h4>
+<p>
+    "But the first thing YOU ARE a TRIUNE BEING, just like Father, Son, and Holy Ghost. Father, Son and Holy Ghost is THREE TITLES going to ONE PERSON, which is JESUS CHRIST. And YOU'RE soul, body and spirit. But it takes THOSE THREE to MAKE YOU. With just ONE of them, you're NOT YOU. IT takes THREE to make YOU.. YOU'RE living in a HOUSE - SOUL, BODY and SPIRIT. THAT'S THE WAY GOD LIVED in JESUS CHRIST, both SOUL, BODY and SPIRIT."(Inner Veil/ 56-0121)
+
+
+<br><br>
+"Now in my HOME, I'm THREE different PEOPLE. In my home my wife has claims on me as HUSBAND. My daughter out there, she doesn't have any claims on me as HUSBAND; I am her FATHER. And my little grandson there, I'm GRANDFATHER to him; so he has no rights to call me FATHER. I am his grandfather, BUT I'm still the SAME MAN."(Mighty God Unveiled / 64-0629)
+<br><br>
+
+</p>
+<br>
+
+<h4 style="color:blue">8. Brother Branham believed that JESUS is JEHOVAH even from BIRTH:</h4>
+<p>
+    "You know, HE was once a BABY HIMSELF. Talk about a SIGN, Isaiah 9... When they asked for a SIGN, God gave them a SUPERSIGN: "A virgin shall conceive and bear a child. His NAME shall be called Counselor, Prince of Peace, Mighty GOD, the everlasting FATHER. IT SHOULD HAVE BEEN STRIKING - JEHOVAH, a BABY; JEHOVAH GOD, a BABY crying in a MANGER. It ought to have been striking: JEHOVAH, a TEENAGE BOY playing; JEHOVAH, driving nails as a carpenter. Oh, my! And ABOVE ALL: JEHOVAH NAILED TO A CROSS TO SAVE SINNERS, it should have been striking!"(Unbelief Does Not Hinder God/ 62-0128)
+    <br><br>
+
+</p>
+<br>
+
+<h4 style="color:blue">9. Brother Branham believed that JESUS is the Creator:</h4>
+<p>
+    "And that great CREATOR BECAME my SAVIOUR, come down to a little BLOOD CELL, NOT through a man, but come virgin to a woman; and took thils little pollen from the woman, and FORMED HIMSELF A LITTLE HOUSE and LIVED IN IT. Oh, it - it ought to be striking. JEHOVAH over a pile of manure in a barn, crying: JEHOVAH in a MANGER of straw. That's an EVERLASTING SIGN."(Smyrnean Church Age/ 60-1206)
+    <br><br>
+
+</p>
+<br>
+<h4 style="color:blue">10. Brother Branham believed that MELCHISEDEC was JESUS Himself:</h4>
+<p>
+    "Now, MELCHISEDEC, the King of Salem, the Priest of the Most High, the King of Peace, which was NONE OTHER THAN THE FOREPART of the LORD JESUS CHRIST, and when HE met Abraham, He fed Abraham the COMMUNION and blessed him.. WHO WAS THIS PRIEST? NONE OTHER THAN THE INCARNATED LORD JESUS CHRIST. In His magnificent power He was the same ONE a LITTLE LATER ON, after HE met Abraham, and gave him, as being a COVENANT PEOPLE, the COMMUNION."(Melchisedec the Great Prince/ 55-0109m)
+
+
+<br><br>
+When Jesus was manifested in the Old Testament in a theophany, in the Person of Melchisedec, not a priesthood, but the Person, the Man... See? For this Man Jesus had yet not been born, but He was in a theophany so He had no father, no mother. He was God Himself. He was manifested in the form of a Man called King of Peace and King of Righteousness. See King of Salem, which is? He was Melchisedec. He had neither father nor mother, beginning of days of ending of life. See? It was Jesus in a theophany in the form of a man.(CHRIST.REVEALED.IN.HIS.OWN.WORD V-4 N-10 65-0822M)
+<br><br>
+
+</p>
+<br>
+
+<h4 style="color:blue">11. Brother Branham said that GOD in His "FATHERHOOD" office was the indwelling Spirit; while the "SONSHIP" office was His human flesh, Jesus.</h4>
+<p>
+    "Jesus said that God was with Him, "I and My Father are One. My Father dwells in Me.” Not Jesus, and being one with God; but God was in Christ, reconciling the world to Himself. And you Oneness brethren, many of you get off the wrong track when you try to think that God is one like your finger is one. He can't be His Own Father. He can't be."(Palmerworm Locust Caterpillar 59-0823 140)
+
+<br><br>
+"Now, it's many times it's been said that no man can see God at anytime, the Bible said so. But the only begotten of the Father has declared Him. Philip, here was very inquisitive; he wanted to see the Father. Says here He said, "I've been so long with you, Philip, and you don't know Me?" Said, "When you see Me you see My Father." In other words, you see the Father express Hisself through the Son. Him and the Father were one in the sense that His Father was dwelling in Him, not Him doing the works; He was a Son, Himself, the immortal, virgin born, Son of God. And then in Him was dwelling the God the Father, expressing Hisself to the world, His attitude towards the people. See? Well, that's how Christ and God were one. God was in Christ reconciling the world to Himself. Now, He said, "When you see Me, you see the Father, and why do you say, 'Show us the Father?'(SHOW US THE FATHER IT'LL SATISFY 56-0422 E-36 )
+
+<br><br>
+"That's the reason people couldn't understand Him. Sometime it was Christ speaking... or was the Son speaking. Other times it was the Father speaking. He was a dual Person. He was one Man, the Son. God was in, which was tabernacling in Him. But what did He do? Did He go around saying, "I'm the Healer." Very contrary, He said, "I'm not the Healer." He said, "It isn't Me that doth the works; it's My Father that dwelleth in Me." And in Saint John the 19th chapter when He was questioned for passing a whole bunch of crippled, lame, withered, halt, blind people, healed one man laying on a pallet, the Father showed Him to go there and heal. Walked away and left the rest of them laying there, they questioned Him. A man packing his bed on the sabbath. Listen to what He said. Saint John 5:19: "Verily, verily, I say unto you: The Son can do nothing in Himself, but what he sees the Father doing, that doeth the Son likewise." Is that what He said? "I do nothing till the Father shows Me a vision first what to do."(JEHOVAH JIREH 56-0429 053)
+<br><br>
+
+</p>
+<br>
+
+<h4 style="color:blue">12. Brother Branham said that if people can't believe the true REVELATION of the GODhead, they wont be able to understand the mysteries of the Bible:</h4>
+<p>
+    "If people CAN'T SEE the TRUTH of the GODHEAD, but FIGHT it; they can't ever see the rest of the TRUTH because the REVELATION is JESUS CHRIST in HIS CHURCH and HIS works in the MIDST of the Church Ages."(Seven Church Age Book/ pp. 309)
+    <br><br>
+
+</p>
+<hr>
+<h2>Conclusion</h2>
+<hr>
+
+<p>
+    Brother Branham never taught us TWO OR THREE PERSONS in a one ONE GOD. God's prophet taught us that there are THREE "MANIFESTATIONS" OR "THREE OFFICES" of the ONE GOD, but not TWO orTHREE PERSONS in a ONE GOD. The "Fatherhood" is an office, the "Sonship" is an office, and the "Holy Ghost" is an "office". Yet God is all of them. You can't cut God in TWO or THREE PIECES and give Him to a Jew. The Jews always believed in only One God as was stated in the First Commandment that was given to them by God through their prophet Moses. Yet they missed seeing that that One God came down and manifested Himself in a human flesh. That's why they could not believe in Jesus when He said, "I and My Father are ONE."
+<br><br>
+The teaching of multiple gods came from Pagan Greek and Pagan Roman Empire (Zeus, Jupiter, Hermes, Venus, Mercury, etc) and was adopted by the Roman Catholic Church, and by most of the Protestant churches today.
+<br><br>
+Yet God is not ONE like your finger one, as the ONENESS GROUP of people teaches it. The ONENESS denomination makes Jesus the MAN as the Father also. Brother Branham said it could not be. JESUS was the BODY-FLESH of GOD called the SON, while the FATHER was the indwelling SPIRIT dwelling inside that Body. God could not die in the Spirit, so he created a BODY for Himself in order to redeem us from our sins. "For without the shedding of BLOOD, there is no remission of sins." A Spirit could not die, so God made Himself a human body and wrapped Himself into it. That's the mystery of the Godhead. Yet that does not mean that Jesus the flesh is NOT God just because He died. Jesus was both God and man. He was the first of His kind. But we will be like Him after this corruptible body has put on incorruption and this mortality has put on immortality, for Jesus is the firstborn amongst many brethren. The mystery of Godliness is this, "For without controversy, God was manifested in FLESH"(Read 1 Tim 3:16).
+<br><br>
+Man needs to get the exact revelation about the Godhead or else he will fall into serving a God he personally does not know.
+</p>
+<br>
+<a href="mystery.html" style="text-decoration: none;">Back to Mysteries</a>
+
+        </div>
+    </div>
+</body>
+<script>
+    // JavaScript to toggle the navigation menu
+    document.getElementById('hamburger').addEventListener('click', function () {
+        const nav = document.getElementById('nav');
+        nav.classList.toggle('active'); // Toggle the 'active' class
+    });
+</script>
+</html>

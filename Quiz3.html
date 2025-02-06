@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leviticus Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .header {
+            width: 100%;
+            background-color: #008000; /* Green */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-sizing: border-box; /* Include padding in width */
+            position: fixed; /* Fix the header at the top */
+            top: 0; /* Align to the top of the page */
+            left: 0; /* Align to the left */
+            z-index: 1000; /* Ensure it appears on top of other content */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #333;
+            padding-top: 60px; /* Offset for fixed header */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center; /* Align items vertically */
+            gap: 10px; /* Add space between the image and text */
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+        }
+
+        .quiz-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .options label {
+            display: block;
+            margin: 5px 0;
+            font-size:16px;
+        }
+
+        p {
+            font-size:18px;
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #008000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .btn:hover {
+            background-color: #005f00;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        input {
+            cursor: pointer;
+        }
+        .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1000; /* Sit on top */
+        left: 50%; /* Center horizontally */
+        top: 50%; /* Center vertically */
+        transform: translate(-50%, -50%); /* Offset for exact centering */
+        width: 80%; /* Set width of modal */
+        max-width: 500px; /* Limit modal width */
+        background-color: #fff; /* White background */
+        border: 1px solid #ccc; /* Optional border */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for effect */
+        padding: 20px; /* Add some padding */
+    }
+
+    .modal-content {
+        position: relative; /* Ensure elements stay within modal */
+    }
+
+    .close {
+        position: absolute; /* Position close button */
+        top: 10px; /* Align near top */
+        right: 10px; /* Align near right edge */
+        font-size: 1.5em; /* Increase size */
+        color: #888; /* Gray color */
+        cursor: pointer; /* Change cursor to pointer */
+    }
+
+    .close:hover {
+        color: #000; /* Black on hover */
+    }
+    #quiz-link {
+    border-bottom: 3px solid white; /* Adds a bottom border */
+}
+
+#quiz-link:hover {
+    border-bottom: 2px solid white; /* Keeps the border on hover */
+}
+.back-btn {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #008000;
+            color: white;
+            border: none;
+            font-size: 17px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .hamburger {
+            display: none; /* Hide hamburger icon by default */
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+@media screen and (max-width: 768px) {
+    
+    .nav {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        position: fixed; /* Fullscreen menu */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #008000;
+        padding: 20px;
+        box-shadow: none;
+        z-index: 1001;
+        justify-content: flex-start; /* Start at the top */
+        align-items: center; /* Center horizontally */
+        text-align: center;
+        padding-top:100px;
+        margin-top:50px;
+    }
+
+    .nav.active {
+        display: flex; /* Show navigation when active */
+    }
+
+    .nav .logo {
+        display: flex;
+        flex-direction: column; /* Stack logo vertically */
+        align-items: center; /* Center logo content */
+        color: white;
+        margin-bottom: 30px; /* Space below logo */
+    }
+
+    .nav .logo img {
+        width: 60px; /* Larger logo size */
+        height: auto;
+        margin-bottom: 10px; /* Space between logo and text */
+    }
+
+    .nav a {
+        color: white;
+        font-size: 1.5em; /* Larger font size for fullscreen */
+        margin-bottom: 20px; /* Add spacing between links */
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1002; /* Above the fullscreen menu */
+        cursor:pointer;
+    }
+    .main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="" width="30">
+            The End Time Message
+        </div>
+        <i class="fa fa-bars hamburger" id="hamburger"></i>
+        <nav class="nav" id="nav">
+            <a href="home.html" id="home-link">Home</a>
+            <a href="story.html" id="story-link">Story</a>
+            <a href="Quiz.html" id="quiz-link">Quiz</a>
+            <a href="mystery.html" id="mystery-link">Mysteries</a>
+            <a href="bible.html" id="bible-link">Bible</a>
+
+
+        </nav>
+    </header>
+
+    <div class="quiz-container">
+        <form id="quiz-form">
+            <br>
+            <a class="back-btn" href="Quiz.html">Back to Quiz</a>
+            <h1 style=" text-align:center; ">Book of Leviticus Bible Quiz </h1>
+            <br><br>
+            <div class="question">
+                <p>1. What type of animal was commonly offered as a sin offering?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A. Sheep</label>
+                    <label><input type="radio" name="q1" value="B"> B. Dove</label>
+                    <label><input type="radio" name="q1" value="C"> C. Goat</label>
+                    <label><input type="radio" name="q1" value="D"> D. Bull</label>
+                </div>
+            </div>
+
+
+
+            <div class="question">
+                <p>2. What was the name of the holy day of rest in Leviticus?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A. Passover</label>
+                    <label><input type="radio" name="q2" value="B"> B. Sabbath</label>
+                    <label><input type="radio" name="q2" value="C"> C. Jubilee</label>
+                    <label><input type="radio" name="q2" value="D"> D. Atonement</label>
+                </div>
+            </div>
+
+
+            <div class="question">
+                <p>3. Who were the priests chosen to serve in the Tabernacle?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A. Levites</label>
+                    <label><input type="radio" name="q3" value="B"> B. Judges</label>
+                    <label><input type="radio" name="q3" value="C"> C. Prophets</label>
+                    <label><input type="radio" name="q3" value="D"> D. Kings</label>
+                </div>
+            </div>
+
+
+
+            <div class="question">
+                <p>4. What was the penalty for blasphemy in Leviticus?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A. Flogging</label>
+                    <label><input type="radio" name="q4" value="B"> B. Stoning</label>
+                    <label><input type="radio" name="q4" value="C"> C. Exile</label>
+                    <label><input type="radio" name="q4" value="D"> D. Fines</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. What liquid was used for purification and offerings?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A. Wine</label>
+                    <label><input type="radio" name="q5" value="B"> B. Water</label>
+                    <label><input type="radio" name="q5" value="C"> C. Oil</label>
+                    <label><input type="radio" name="q5" value="D"> D. Blood</label>
+                </div>
+            </div>
+
+
+            <div class="question">
+                <p>6. What type of bread was used in the offerings?</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A. Leavened</label>
+                    <label><input type="radio" name="q6" value="B"> B. Unleavened</label>
+                    <label><input type="radio" name="q6" value="C"> C. Rye</label>
+                    <label><input type="radio" name="q6" value="D"> D. Barley</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. What was the punishment for eating blood in Leviticus?</p>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A. Death</label>
+                    <label><input type="radio" name="q7" value="B"> B. Exile</label>
+                    <label><input type="radio" name="q7" value="C"> C. Fasting</label>
+                    <label><input type="radio" name="q7" value="D"> D. Sacrifice</label>
+                </div>
+            </div>
+
+
+
+            <div class="question">
+                <p>8. What day was considered the Day of Atonement?</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A. Tenth</label>
+                    <label><input type="radio" name="q8" value="B"> B. Seventh</label>
+                    <label><input type="radio" name="q8" value="C"> C. Twelfth</label>
+                    <label><input type="radio" name="q8" value="D"> D. Fifth</label>
+                </div>
+            </div>
+
+
+            <div class="question">
+                <p>9. What body part of the animal was burned as the best part for God?</p>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A. Heart</label>
+                    <label><input type="radio" name="q9" value="B"> B. Fat</label>
+                    <label><input type="radio" name="q9" value="C"> C. Liver</label>
+                    <label><input type="radio" name="q9" value="D"> D. Head</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>10. What was the land required to observe every seventh year?</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A. Rest</label>
+                    <label><input type="radio" name="q10" value="B"> B. Fallow</label>
+                    <label><input type="radio" name="q10" value="C"> C. Tithes</label>
+                    <label><input type="radio" name="q10" value="D"> D. Harvest</label>
+                </div>
+            </div>
+
+
+
+
+
+            <button type="button" class="btn" onclick="checkAnswers()">Submit</button>
+        </form>
+        
+        <div id="resultModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="modal-result"></div>
+            </div>
+        </div>
+
+        <script>
+            function checkAnswers() {
+                const answers = {
+                    q1: 'C',
+                    q2: 'B',
+                    q3: 'A',
+                    q4: 'B',
+                    q5: 'D',
+                    q6: 'B',
+                    q7: 'B',
+                    q8: 'A',
+                    q9: 'B',
+                    q10: 'A'
+                };
+    
+                let score = 0;
+                const totalQuestions = Object.keys(answers).length;
+                const form = document.getElementById('quiz-form');
+    
+                for (const [question, correctAnswer] of Object.entries(answers)) {
+                    const userAnswer = form[question].value;
+                    if (userAnswer === correctAnswer) {
+                        score++;
+                    }
+                }
+    
+                const percentage = ((score / totalQuestions) * 100).toFixed(2);
+                const passMessage = score >= 7 ? "You Pass! Amen." : "You Fail! Try Again.";
+    
+                const modalResult = document.getElementById('modal-result');
+                modalResult.innerHTML = `
+                    <h3 style="text-align:center; color:green;">Result</h3>
+                    <p>Your Points: ${score} / ${totalQuestions}</p>
+                    <p>Your Score: ${percentage}%</p>
+                    <p>${passMessage}</p>
+                    <a href="Quiz3.html">Click Here to try Again</a>
+                `;
+                modalResult.style.color = score >= 7 ? "green" : "red";
+    
+                // Show the modal
+                const modal = document.getElementById('resultModal');
+                modal.style.display = "block";
+            }
+    
+            function closeModal() {
+                const modal = document.getElementById('resultModal');
+                modal.style.display = "none";
+            }
+    
+            // Close modal if user clicks outside of it
+            window.onclick = function(event) {
+                const modal = document.getElementById('resultModal');
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            };
+        </script>
+        <script>
+            // JavaScript to toggle the navigation menu
+            document.getElementById('hamburger').addEventListener('click', function () {
+                const nav = document.getElementById('nav');
+                nav.classList.toggle('active'); // Toggle the 'active' class
+            });
+        </script>
+</body>
+</html>

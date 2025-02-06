@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .header {
+            width: 100%;
+            background-color: #008000; /* Green */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-sizing: border-box; /* Include padding in width */
+            position: fixed; /* Fix the header at the top */
+            top: 0; /* Align to the top of the page */
+            left: 0; /* Align to the left */
+            z-index: 1000; /* Ensure it appears on top of other content */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+          margin: 0;
+          font-family: 'Georgia', 'Times New Roman', serif;
+          color: #333;
+          background: #f5e9d4; /* Light parchment-like background */
+           /* Space for the fixed header */
+      }
+
+      .logo {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Add space between the image and text */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-top: 20px;
+        }
+
+        .main-content {
+            margin: 0 auto;
+            padding: 20px;
+            width: 90%; /* Central content width */
+            box-sizing: border-box;
+            background-color: #f0f2f5;
+            border-radius: 8px;
+            margin-top: 100px; /* Offset header space */
+            
+            border: 1px solid #888;
+        }
+
+        .main-content, .sub-section, .transform-section {
+            text-align: justify;
+        }
+
+        .main-content h1, .sub-section h1, .transform-section h1 {
+            text-align: center;
+            font-size: 2em;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .sub-section h3, .transform-section h3 {
+            text-align: left;
+        }
+
+        .main-content img,
+.sub-section img,
+.transform-section img {
+    max-width: 100%; /* Ensure images do not exceed container */
+    height: auto;
+    border: 2px solid #008000;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+
+        .main-content ol, .sub-section ol, .transform-section ol {
+            list-style-position: inside;
+            padding-left: 0;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .main-content ol li, .sub-section ol li, .transform-section li {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .main-content ol li span, .sub-section ol li span {
+            font-weight: bold;
+        }
+
+        .sub-section {
+            margin-top: 40px;
+        }
+
+        .transform-section {
+            margin-top: 20px;
+        }
+
+        .transform-section ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .transform-section ul li {
+            margin-bottom: 10px;
+        }
+
+        #home-link {
+            border-bottom: 3px solid white;
+        }
+
+        #home-link:hover {
+            border-bottom: 2px solid white;
+        }
+
+        /* Decorative Borders Between Sections */
+        .section-divider {
+            border-bottom: 2px solid #008000;
+            margin: 40px 0;
+        }
+
+        .hamburger {
+            display: none; /* Hide hamburger icon by default */
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 768px) {
+    .nav {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        position: fixed; /* Fullscreen menu */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #008000;
+        padding: 20px;
+        box-shadow: none;
+        z-index: 1001;
+        justify-content: flex-start; /* Start at the top */
+        align-items: center; /* Center horizontally */
+        text-align: center;
+        padding-top:100px;
+        margin-top:50px;
+    }
+
+    .nav.active {
+        display: flex; /* Show navigation when active */
+    }
+
+    .nav .logo {
+        display: flex;
+        flex-direction: column; /* Stack logo vertically */
+        align-items: center; /* Center logo content */
+        color: white;
+        margin-bottom: 30px; /* Space below logo */
+    }
+
+    .nav .logo img {
+        width: 60px; /* Larger logo size */
+        height: auto;
+        margin-bottom: 10px; /* Space between logo and text */
+    }
+
+    .nav a {
+        color: white;
+        font-size: 1.5em; /* Larger font size for fullscreen */
+        margin-bottom: 20px; /* Add spacing between links */
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1002; /* Above the fullscreen menu */
+        cursor:pointer;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="" width="30">
+            The End Time Message
+        </div>
+        <i class="fa fa-bars hamburger" id="hamburger"></i>
+        <nav class="nav" id="nav">
+            <a href="home.html" id="home-link">Home</a>
+            <a href="story.html" id="story-link">Story</a>
+            <a href="Quiz.html">Quiz</a>
+            <a href="mystery.html" id="mystery-link">Mysteries</a>
+            <a href="bible.html" id="bible-link">Bible</a>
+
+
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <img src="images/background.webp" alt="Bible and serene background">
+        <h1>Why do we need the Bible?</h1>
+        <ol>
+            <li><span>Spiritual Guidance:</span> The Bible helps us understand God’s will and purpose for humanity, providing clarity on faith and salvation.</li>
+            <li><span>Moral Compass:</span> It teaches values such as love, kindness, forgiveness, and justice, shaping how we interact with others.</li>
+            <li><span>Hope and Comfort:</span> In challenging times, its promises and teachings provide peace, hope, and strength.</li>
+            <li><span>Foundation of Faith:</span> For Christians, it is the ultimate authority on God’s character, the life of Jesus Christ, and the principles of living a godly life.</li>
+            <li><span>Historical and Cultural Insight:</span> The Bible reflects profound historical and cultural lessons, giving perspective on humanity’s journey and God’s relationship with people.</li>
+            <li><span>Inspiration for Change:</span> Its teachings encourage personal growth, inspiring people to live with purpose and integrity.</li>
+        </ol>
+
+        <div class="section-divider"></div>
+
+        <div class="sub-section">
+            <h1>Why Study The Bible?</h1>
+            <ol>
+                <li><span>To Know God:</span> The Bible is considered by many to be the inspired Word of God. By studying it, people can gain a deeper understanding of God's character, His plans for humanity, and His love for us.</li>
+                <li><span>Spiritual Growth:</span> The Bible provides guidance, wisdom, and inspiration for living a meaningful life. It can help individuals to develop their faith, strengthen their relationship with God, and grow spiritually.</li>
+                <li><span>Literary Appreciation:</span> The Bible contains a variety of literary genres, including poetry, history, prophecy, and wisdom literature. It can be appreciated for its beauty, depth, and power.</li>
+                <li><span>Community and Belonging:</span> Studying the Bible can connect people with a community of faith, providing a sense of belonging and support.</li>
+            </ol>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="transform-section">
+            <h1>Can the Bible Transform Life?</h1>
+            <h3><strong>Spiritual Transformation</strong></h3>
+            <ul>
+                <li><strong>Renewing the Mind:</strong> The Bible encourages readers to renew their minds, to think differently about life, and to adopt a God-centered perspective.</li>
+                <li><strong>Developing a Relationship with God:</strong> It provides a framework for building a personal relationship with God through prayer, meditation, and worship.</li>
+            </ul>
+            <h3><strong>Moral Transformation</strong></h3>
+            <ul>
+                <li><strong>Establishing Ethical Standards:</strong> The Bible offers moral guidelines and principles that can help individuals to live a righteous life.</li>
+                <li><strong>Overcoming Sin:</strong> It provides hope and encouragement for those struggling with sin, offering a path to forgiveness and restoration.</li>
+            </ul>
+            <h3><strong>Emotional Transformation</strong></h3>
+            <ul>
+                <li><strong>Finding Peace and Joy:</strong> The Bible offers comfort and solace, helping individuals to cope with life's challenges.</li>
+                <li><strong>Overcoming Negative Emotions:</strong> It provides strategies for managing negative emotions like anger, fear, and anxiety.</li>
+            </ul>
+            <h3><strong>Social Transformation</strong></h3>
+            <ul>
+                <li><strong>Promoting Love and Compassion:</strong> The Bible teaches the importance of loving one's neighbor and serving others.</li>
+                <li><strong>Building Strong Relationships:</strong> It provides guidance for building strong relationships with family, friends, and community.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    // JavaScript to toggle the navigation menu
+    document.getElementById('hamburger').addEventListener('click', function () {
+        const nav = document.getElementById('nav');
+        nav.classList.toggle('active'); // Toggle the 'active' class
+    });
+</script>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth About the New Birth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .header {
+            width: 100%;
+            background-color: #008000; /* Green */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #333;
+            background: #f5e9d4;
+            background-image: repeating-linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.3),
+                rgba(255, 255, 255, 0.3) 1px,
+                transparent 1px,
+                transparent 50px
+            );
+            padding-top: 80px;
+        }
+
+        .logo {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Add space between the image and text */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+        }
+
+        .comic-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 0 auto;
+            width: 90%;
+            max-width: 800px;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+        }
+
+        .day-box {
+            background: #f0f2f5;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+
+        .day-box img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            border-bottom: 2px solid #008000;
+            margin-bottom: 15px;
+        }
+
+        .day-box h2 {
+            color: red;
+            font-size: 1.8em;
+            text-align: center;
+            
+        }
+
+        .day-box p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+            color: #008000;
+        }
+
+        .back-btn {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #008000;
+            color: white;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            margin-left: 230px;
+        }
+
+        .back-btn:hover {
+            background-color: #006400;
+        }
+        #mystery-link {
+            border-bottom: 3px solid white;
+        }
+
+        #mystery-link:hover {
+            border-bottom: 2px solid white;
+        }
+        .hamburger {
+            display: none; /* Hide hamburger icon by default */
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+@media screen and (max-width: 768px) {
+    
+    .nav {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        position: fixed; /* Fullscreen menu */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #008000;
+        padding: 20px;
+        box-shadow: none;
+        z-index: 1001;
+        justify-content: flex-start; /* Start at the top */
+        align-items: center; /* Center horizontally */
+        text-align: center;
+        padding-top:100px;
+        margin-top:50px;
+    }
+
+    .nav.active {
+        display: flex; /* Show navigation when active */
+    }
+
+    .nav .logo {
+        display: flex;
+        flex-direction: column; /* Stack logo vertically */
+        align-items: center; /* Center logo content */
+        color: white;
+        margin-bottom: 30px; /* Space below logo */
+    }
+
+    .nav .logo img {
+        width: 60px; /* Larger logo size */
+        height: auto;
+        margin-bottom: 10px; /* Space between logo and text */
+    }
+
+    .nav a {
+        color: white;
+        font-size: 1.5em; /* Larger font size for fullscreen */
+        margin-bottom: 20px; /* Add spacing between links */
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1002; /* Above the fullscreen menu */
+        cursor:pointer;
+    }
+    .main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="" width="30">
+            The End Time Message
+        </div>
+        <i class="fa fa-bars hamburger" id="hamburger"></i>
+        <nav class="nav" id="nav">
+            <a href="home.html" id="home-link">Home</a>
+            <a href="story.html" id="story-link">Story</a>
+            <a href="Quiz.html" id="quiz-link">Quiz</a>
+            <a href="mystery.html" id="mystery-link">Mysteries</a>
+            <a href="bible.html" id="bible-link">Bible</a>
+
+
+        </nav>
+    </header>
+
+    <button class="back-btn" onclick="window.location.href='mystery.html';">Back to Mysteries</button>
+
+    <div class="comic-strip">
+        <h1>THE TRUTH ABOUT THE  <span style="color:red">NEW BIRTH </span></h1>
+
+        <!-- Abraham and Keturah -->
+        <div class="day-box">
+        <p>
+          <b>  Jesus answered, Verily, verily, I say unto thee, </b> <i> “Except a man
+             be born of water and [of] the Spirit, he cannot enter into
+              the kingdom of God. That which is born of the flesh is flesh;
+               and that which is born of the Spirit is spirit”. </i> <b> (John 3:5-6) </b>
+        </p>
+        <br>
+        <h2 style="text-align:left; color:black;"> FOR ALL HAVE SINNED </h2>
+        <p>
+            Originally, man was created by God in the likeness of His image <b> (Gen 1:26-27), </b>
+             a <i> "theophany-man". </i> That man was a <i> “spirit-man”, </i> perfect in the sight of God. 
+             It was sinless before God, until God created him a body out of the dust 
+             of the earth for his soul to dwell in <b> (Gen 2:7). </b> Then, that natural body
+              fell by transgression.
+<br><br>
+Our natural life here is nothing but a perversion. It really should be 
+the right Life to begin with but it was perverted by the natural birth
+ – a curse which resulted from Eve’s illicit affair with the serpent.
+  Man is not supposed to die nor even get sick for he himself possesses
+   eternal life to begin with, which is the very Life <b> (zoe) </b> of God.
+<br><br>
+But when Adam and Eve disobeyed God’s Word, all men born of a woman, from then on,
+ were considered <i> “born in sin, shaped in inquity, came to this world speaking lies”, </i>
+  all sinners in the eyes of God.
+<br><br>
+Man was not supposed to be born through sex. That was never God's program. God 
+originally created man just by calling him out of the dust of the earth. 
+That's how God created the first man, Adam. And that's how God intends it to be.
+ In the first resurrection, God just speaks their names and the dead in Christ 
+ shall rise first from the dust of the earth.
+<br><br>
+Original life, then, was perverted when the serpent unveiled sexual 
+reproduction to mankind. It was the result of Eve partaking of the 
+Tree of Knowledge of good and evil.
+<br><br>
+In our first life or our first union, we were joined in at birth 
+by nature. A natural act, man and woman together, associated in 
+sexual affair which brought our first life here. That life is 
+associated with sin and death. <i> “Man [that is] born of a woman [
+is] of few days, and full of trouble.” </i> <b> (Job 14:1) </b> That's why, 
+we need to be born again. We need to be reunited with our original nature - the nature of God.
+<br><br>
+According to the Scriptures, <i> “ALL have sinned and come short of the glory of God”. </i>
+And because we are ALL sinners by virtue of our natural birth - we are all 
+under the curse of death. We needed a Saviour, one born by a Virgin birth 
+and not by sexual conception, to bypass the curse. Jesus is that Kinsman 
+Redeemer, a Perfect One, not born of sexual union but God's own pure blood 
+<b> (hemoglobin and egg) </b> transplanted in the womb of a virgin. Jesus is the Just
+ One who laid down His life as a Perfect Sacrifice <b> (in our place) </b> to 
+ satisfy God’s righteous Law, to justify us, and to redeem us back to God 
+ again. Jesus Christ our Lord and Saviour did that for us. <i> “And you, that 
+ were sometime alienated and enemies in [your] mind by wicked works, yet 
+ now hath He reconciled. In the body of His flesh through death, to present 
+ you holy and unblameable and unreproveable in his sight” </i> <b> (Col. 1:21-22). </b>
+        </p>
+    <img src="images/2genes.jpg" alt="">
+    <br>
+
+    <h2 style="text-align:left; color:black;">THREE STAGES OF THE NEW BIRTH</h2>
+    <p>
+        Just like the natural birth, the New Birth undergoes three stages – water, blood and spirit.
+<br><br>
+        When a woman gives birth to a child, the first thing that comes forth is water,
+         then blood, then life (spirit). Being born again is a similar process 
+         with three stages: <b> (1) Justification by Water, (2) Sanctification by the Blood, 
+         and (3) Baptism of the Holy Spirit. </b> These three consists the New Birth in a person.
+        <br><br>
+        The same process goes even for the earth's redemption. The earth was baptized in
+         water in the days of Noah. It was then sanctified when the blood of Jesus Christ
+          was shed on Calvary's hill. It will be baptized with the Holy Fire of God during 
+          the Battle of Armageddon, before God can finally dwell on it during the Millennium.
+        <br><br>
+        Just the same way, before God can ever dwell upon a person through the 
+        baptism of the Holy Ghost <b> (man- being a temple of the Holy Ghost)  that man needs
+         to undergo these three stages. Justification, sanctification, and Holy Ghost Baptism. </b>
+         God will not dwell upon a filthy, unconverted sinner. Man needs to repent of his
+          sins, be forgiven, be cleansed, be justified, be sanctified, before the Holy Ghost,
+           can ever dwell upon him.
+    </p>
+    <img src="images/3stages.jpg" alt="">
+    <h2 style="text-align:left; color:black;"> FIRST STAGE - JUSTIFICATION </h2>
+    <p>
+        The first work of God’s grace in the sinners life is Justification.
+<br><br>
+      <b>  Romans 3:24 </b> tells us that we are <i> “justified freely by His grace through the 
+        redemption that is in Christ Jesus”. </i> Therefore, God sovereignly and freely 
+        justifies the sinner by calling him/her by the preaching of the Word to 
+        acknowledge that they’re sinners, and to repent and receive Christ as 
+        their personal Saviour and Lord. Through the blood of His own Son, God
+         looks beyond our sin, not laying it to our charge, and offers us 
+         (free of charge) salvation and deliverance from the power and influence 
+         of Satan and the old sinful nature of our flesh - this is Justification.
+          He declares us righteous in Jesus Christ, and through the Gospel He invites 
+          us to accept [take possession of] His free gift.
+        <br><br> 
+      <b>  Justification by faith requires believing the Word, </b> <i> “Faith cometh by hearing, 
+        and hearing by the Word of God. “Seeing ye have purified your souls in 
+        obeying the truth” </i> <b> (I Peter 1:22). </b> Then, Repentance and Water Baptism 
+        must follow it. <b> Acts 2:38 states: </b> <i> “Repent, everyone of you and be baptized 
+        in the Name of Jesus Christ for the remission of sins and you shall receive
+         the gift of the Holy Ghost.” </i>
+        <br><br>
+       <b> Repentance </b> is <i> “sorrow for sin”, “a complete turning away from sin”, </i>
+         and such a <i> “regret over one’s sins so as to decide to change one’s
+          ways’”... “laying aside all filthiness and superfluity of naughtiness,
+           and receive with meekness the engrafted word, which is able to save
+            your souls.” </i> <b> (James 1:21-22). </b>
+        <br><br>
+        Scripturally, repentance has three main elements: <b> (1)conviction, 
+        (2)contrition and the (3)desire to be changed. </b>
+        <br><br>
+       <b> Conviction </b> is God’s red flag of warning us that we are going in the 
+        wrong direction. Being born in sin, we continue on in sin, doing 
+        that which is right in our own eyes without due regard for what
+         God requires in His Word. Therefore, God, through the preaching of
+          the Word, brings conviction that we need to change our ways to line 
+          up with His Word. <b> 1 John 1:8-10 states, </b> <i> “If we say that we have no 
+          sin, we deceive ourselves, and the truth is not in us. If we confess
+           our sins, he is faithful and just to forgive us [our] sins, and to 
+           cleanse us from all unrighteousness. If we say that we have not 
+           sinned, we make him a liar, and his word is not in us. “ </i>
+        <br><br>
+       <b> Contrition </b> is a <i> “sincere sorrow”, </i> a godly sorrow and brokenness
+        for our sins <b> (2nd Cor. 7:10).  The Bible says, </b> <i> “The Lord is nigh unto them
+         that are of a broken heart; and saveth such as be of a contrite spirit.”  </i>
+        <b> (Psalms 34:18). </b> Contrition is a sincere regret over past sins and an earnest,
+          humble desire to walk in a new path of righteousness, according to the 
+          instructions laid out in God’s Word. Contrition includes ‘humbling’
+           ourselves to God’s ways. When we stand at the Cross of Calvary and 
+           see what our sins cost God, our hearts should be broken and contrite 
+           - humbled; and we should cry out like the Publican cried, <i> “God, be 
+           merciful to me a sinner” </i> <b> (Luke 18:13). </b> The Bible tells us that when 
+           Peter considered how he had ignored and denied the Lord three times, 
+           he went out and wept bitterly because of his sin <b> (Matthew 26:75). </b>
+        <br><br>
+       <b> The Desire To Be Changed: </b> This is the third element of <i> “Repentance”. </i>
+        It is the desire for God to change your thought pattern, change your attitude,
+         change your ways, change your motives and objectives in life, 
+         to conform to His ways and His will for you. In <b> 2nd. Corinthians 
+         7:10 the Bible says, </b> <i> “For godly sorrow worketh repentance to salvation.” </i>
+    </p>
+    <br>
+    <h2 style="text-align:left; color:black;"> SECOND STAGE- SANCTIFICATION</h2>
+    <p>
+        The second work of God’s grace in the sinner’s life is <b> Sanctification. </b>
+<br><br>
+       <b> The Bible says, </b> <i> “For this is the will of God, [even] your sanctification...
+         that every one of you should know how to possess his vessel in 
+         sanctification and honour;” </i> <b> (1st. Thess. 4:3-4) </b> <i> “God hath from 
+         the beginning chosen you to salvation through sanctification of 
+         the Spirit and belief of the truth:”. </i> <b> (2nd Thess. 2:13). </b>
+        <br><br>
+       <b> Sanctification </b> is that grace whereby, at the time after repentance,
+         the vessel of the individual’s life is <i> “cleansed” </i> from all past 
+         sins and unbelief and he/she is <i> “set aside for service”. </i> In the 
+         experience of sanctification, the individual feels swept, clean, 
+         fresh and garnished. All the bad habits and vices are being taken 
+         away slowly and the individual’s mind is set towards a life of 
+         holiness by the Holy Spirit. The principle of sin [by which we 
+         previously lived] is cast out. It’s an absolutely wonderful experience,
+          creating in us the desire to always live a holy and sanctified life 
+          for the Lord - always doing what the Word [Bible] says.
+    </p>
+<br>
+    <h2 style="text-align:left; color:black;"> THIRD STAGE - BAPTISM OF THE HOLY SPIRIT</h2>
+    <p>
+       <b> The third work of God’s Grace in the sinners life is the Baptism of the Holy Ghost. </b>
+<br><br>
+       <b> In Acts 1:8 it says, </b> <i> “But ye shall receive power, after that the
+         Holy Ghost is come upon you: and ye shall be witnesses unto me”. </i>
+        From these verses we conclude that Jesus Christ alone is the <i> “Baptizer”  </i>
+        with the Holy Ghost; and this Baptism is a Baptism of <i> “Power”. </i>
+        It is a portion of the life of God coming into the believer to guide
+         them into <b> ALL Truth  (John 16:13) </b> and to give them power over all the
+          power of the enemy and to be witnesses of Him and His Word. We can find
+           that even though Apostle Peter was called of Jesus Christ and was
+            given the keys to the kingdom, yet we read in the Bible that Peter
+             still denied Jesus Christ three times before the cock crowed. 
+             That is because Peter did not have the Holy Ghost yet during 
+             that time and he still have to wait for the Day of Pentecost 
+             in order to receive the Promise of <i> "fire" </i> baptism in his soul. 
+             So we can conclude from here that a man can be baptized in 
+             water and be sanctified, yet without the Holy Ghost baptism, 
+             he can still deny our God and compromise with His Word. We need 
+             the Holy Ghost baptism in order for us to be <i> "more than conquerors" </i>
+              in Christ Jesus. The Holy Ghost is also that <i> "oil" </i> that makes the wise 
+              virgins qualified to go into the Wedding Supper of the Lamb. Those 
+              that are without the Holy Ghost will be left behind in the Tribulation 
+              Period, weeping, wailing and gnashing their teeth.
+        <br><br>
+        The Holy Spirit is our power over the world <b> (worldliness),  </b>
+        the flesh <b> (self) and the Devil. </b> He enables us to live daily 
+        for God - making the Word flesh in us. It is the <i> “law of the 
+        Spirit of Life in Christ Jesus which hath made me free from the 
+        law of sin and death”. </i> <b> (Romans 8:2).  The Baptism of the Holy Ghost 
+        continues the work of Sanctification, separating us daily, from the 
+        world and the things of the world. The Holy Spirit (in us)</b> creates 
+        in us a <i> “hunger and thirst for the righteousness of God”. </i>
+        <br><br>
+        The Baptism of the Holy Ghost seals us into the mystical Body 
+        of Christ. <b> The Bible says, </b> <i> “For by one Spirit are we all baptized 
+        into one body, whether [we be] Jews or Gentiles, whether [we be] bond 
+        or free; and have been all made to drink into one Spirit.” </i> <b> (1 Corinthians 12:13). </b>
+        In the Baptism of the Holy Ghost the believer thus becomes the <i> “Temple of 
+        the Living God”. </i> <b> 1st Corinthians 6:19 says, </b> “What? know ye not that your 
+        body is the temple of the Holy Ghost [which is] in you, which ye have of God, 
+        and ye are not your own?” The Holy Ghost goes right into the soul, moves the 
+        old nature aside and takes control, governing our lives, not according to the 
+        dictates of the old fleshly nature of our natural birth, but according to the 
+        dictates of our new nature. Now, our lives become living epistles of the Word 
+        of God - read and known of all men <b> (II Corinthians 3:2-3). </b>
+        <br><br>
+        The Holy Ghost will also make the promises of God in <b> Mark 16;17-18 </b> a 
+        reality which state this, <i> “And these SIGNS shall follow them that believe; 
+        In my Name shall they cast out devils; they shall speak with new tongues; 
+        They shall take up serpents; and if they drink any deadly thing, it shall 
+        not hurt them; they shall lay hands on the sick, and they shall recover.” </i>
+        <br><br>
+        Every true Christian ought to undergo these three stages of the New Birth 
+        for <b> Jesus Christ Himself said that </b> <i> “except a man be born again, he cannot 
+        enter into the kingdom of God.” </i>
+        <br><br>
+        <b> If you have the Baptism of the Holy Ghost you will LOVE the Lord; 
+        believe ALL His Word and with His help, OBEY it, and you will manifest </b>
+        the <i> “fruits of the Spirit”. </i> Don’t try to have any sensation or anything 
+        to take the place of the Holy Spirit. When the new birth has come, 
+        you are changed. You don’t have to do anything to prove it, your life 
+        proves it. As you walk, you are filled with love, peace, long-suffering, 
+        gentleness, meekness, patience, that’s what you are. And the whole world 
+        will see the reflection of Jesus Christ in you. <b> (Galatians 5:22-23). </b> Look 
+        at the kind of person you were and then look at what you are now - see if 
+        there’s a change - see if you have indeed received this <i> “LIFE-CHANGING 
+        experience” </i> of the Baptism of the Holy Ghost - an experience that makes 
+        you <i> “spiritually minded”, </i> not just <i> “religiously inclined”. </i> Check up on 
+        your relationship with God to see if you put more emphasis on the <b> WORD </b>
+        of God than you do the church you attend; see if you really believe the 
+       <b> WORD </b> more than you do a man-made dogma or creed; see if you are really 
+      <b>  LIVING </b> every day for the Glory of God, giving Him the pre-eminence in <b> ALL </b> that you do.
+    </p>
+<br>
+    <h2 style="text-align:left; color:black;"> THE NEW BIRTH: SABBATH TO OUR SOUL</h2>
+    <p>
+        The Christian faith is based solidly upon REST.
+<br><br>
+A born-again Christian is not tossed about. He doesn’t run from place 
+to place or fuss and fume and worry about things. A Christian rests. 
+It’s all over. It’s all finished for the believer at Calvary. Sickness, 
+trials and disappointments may come, but the Christian is at rest knowing 
+this, that God’s able to keep that which He has promised, knowing that no 
+matter what the thing is, or how it looks, there’s neither sickness, sorrow, 
+death, starvation or anything that can separate us from the love of God that’s 
+in Jesus Christ. We are at rest. That’s the New Birth. That’s our Sabbath. 
+<i> “Come unto me, all [ye] that labour and are heavy laden, and I will give you rest,”  </i>
+that’s Jesus’ promise to us <b> (Matt. 11:28). </b> <i> “Let us (therefore) lay aside every weight, 
+and the sin which doth so easily beset [us], and let us run with patience the race that 
+is set before us, looking unto Jesus the author and finisher of [our] faith” </i> <b> (Heb 12:1-2). </b>
+    </p>
+<img src="images/3rings.jpg" alt="">
+<p>
+    One can only receive the New Birth if their life is expressing the <b> PRESENT TRUTH </b> which is
+     the Word-Message of the Hour that’s allotted by God for the day in which we live in. 
+    <b> Jesus said </b> that the evidence of the New Birth is when the Holy Spirit guides you into 
+   <b>  ALL TRUTH </b> revealed for your DAY and reveals what will come to pass in your age <b> (John 16:13).</b>
+<br><br>
+If you haven’t received the Holy Ghost yet, and you want to receive Him into your life,
+ I encourage you to follow Peter’s instructions in <b> Acts 2:37-38, </b> and do as those 
+ in the <b> House of Cornelius in Act 10  - Hear the Word, Believe the Word, Receive 
+ the Word into your heart and be baptized in the NAME of Jesus Christ by immersion. </b>
+ Rest assured that the Holy Spirit will come to your heart if you will believe all 
+ the Word and allow Him to <b> LIVE His Life THROUGH YOU! </b>
+</p>
+<img src="images/seed.jpg" alt="">
+<br>
+<h2 style="text-align:left; color:black;">BEWARE: BAPTISM OF THE HOLY GHOST IMPERSONATED</h2>
+<p>
+In relation to the Baptism of the Holy Ghost, the Bible forewarns us of the 
+coming of false christs and false prophets which are to deceive the very elect 
+of God if it were possible <b> (Matt. 24:24). </b>
+<br><br>
+They will try to impersonate the gifts of the Holy Spirit to sway people into 
+believing that they are genuinely called. Just as Jannes and Jambres impersonated 
+Moses by producing snakes in the sight of Pharaoh, these people will also be like 
+Balaam who will have access to signs and visions yet their folly will be made manifest. 
+These kind of people will seek after fame, popularity and money, thereby making the 
+Word of God a commodity. Truly, they are called <i> “false anointed ones” </i> in the last days.
+</p>
+<br>
+<h2 style="text-align:left; color:black;"> THE WHEAT AND THE TARES </h2>
+<p>
+In the Parable of the Wheat and the Tares of <b> Matthew 13:24-30, </b> we are taught 
+that both the wheat and the tares received the <b> same RAIN and the same SUNLIGHT  </b>
+to make them grow. <b> The RAIN and the SUN </b> in the parable symbolize the Holy Spirit. 
+The <b> RAIN </b> falls on the just and the unjust which means that the <b> Holy Spirit </b> can 
+anoint and make a person do things, but that does not mean that the person is saved. 
+Think of Caiaphas; he prophesied exactly regarding the death of Jesus Christ. Judas, 
+who was one of the 12 apostles, went along casting out devils and healing the sick 
+in Jesus’ Name, yet he was the <i> “son of perdition”. </i>
+<br><br>
+The Spirit can anoint these people yet that does not mean that they’re saved. 
+The weeds can rejoice with the wheat. But it's what it is at the core <b> (soul). </b>
+Christians can act like they're Christians, and act and be ever so good at it, 
+but that doesn't mean they're saved. The Spirit can be there, the real genuine 
+Spirit, but that still don't mean they're saved. Only the souls of those individuals 
+who are predestinated by God before the foundation of the world can truly receive 
+the genuine Holy Spirit Baptism.
+</p>
+<br>
+<h2 style="text-align:left; color:black;"> NOT EVERYONE THAT SAITH “LORD” </h2>
+<p>
+<b> Jesus said, </b> <i> “Not every one that saith unto me, Lord, Lord, shall enter into 
+the kingdom of heaven; but he that doeth the will of my Father which is in 
+heaven. Many will say to me in that day, Lord, Lord, have we not prophesied in 
+thy Name? and in thy Name have cast out devils? and in thy Name done many wonderful 
+works? And then will I profess unto them, I never knew you: depart from me, ye that 
+work iniquity.” </i> <b> (Matt. 7:21-23). </b>
+<br><br>
+These people are anointed yet are false. Remember, the weed receives 
+the same power that falls on the wheat to make it grow, makes the weed 
+shout, too. The little old weed stand right up and just as happy as the 
+wheat is and lives by the same life. And a sinner can stay in the Presence 
+of God, shout the victory, and live like a Christian. But if there isn't 
+something different in the heart, He could have the same power to cast out 
+evil spirit. Jesus said so. He can preach the Gospel just as good as any 
+other preacher can do. The Bible teaches it. Yes, sir. <i> "Though I speak with 
+tongue of men and angels, though I give my body to be burned as a sacrifice, 
+though I give an my goods to feed the poor, though I have faith to move mountains, 
+I do all these things, I preach in His Name, I cast out devils in His Name," he said, 
+and still "I am nothing." So a man could do it, and still be "nothing." </i> <b> (1 Cor. 13). </b>
+<br><br>
+People can be anointed by the Holy Spirit in their outside body realm and 
+spirit realm, but only the Bride of Jesus Christ can be truly baptized 
+by the Holy Spirit in the soul realm where the predestinated seed of God 
+in the individual person lies.
+<br><br>
+In the last days there's going to be only two classes of people. One of 
+them's going to have the Seal of God, the other one the Mark of the Beast. 
+If the Seal of God is the Baptism of Holy Ghost, then without the Holy Ghost 
+is the Mark of the Beast. The Bible said that the two spirits would be so close 
+together, it would deceive the very Elected if it was possible. But it'll 
+never do it, because the true born-again Christians were elected to Eternal 
+Life before the foundation of the world <b> (Rev. 13:8). </b>
+</p>
+
+
+
+
+
+
+<a href="mystery.html" style="text-decoration: none;">Back to Mysteries</a>
+    </div>
+    </div>
+</body>
+<script>
+    // JavaScript to toggle the navigation menu
+    document.getElementById('hamburger').addEventListener('click', function () {
+        const nav = document.getElementById('nav');
+        nav.classList.toggle('active'); // Toggle the 'active' class
+    });
+</script>
+</html>
